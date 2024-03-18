@@ -1,0 +1,80 @@
+[
+  {
+    "name": "Shannon",
+    "lists": [
+      {
+        "name": "Test list 1 Shannon",
+        "words": [
+          {
+            "source": "Hello",
+            "translation": "Hallo"
+          },
+          {
+            "source": "Thank you",
+            "translation": "Dank je wel"
+          },
+          {
+            "source": "Bye",
+            "translation": "Doei"
+          }
+        ]
+      },
+      {
+        "name": "Test list 2 Shannon",
+        "words": [
+          {
+            "source": "Hello",
+            "translation": "Hallo"
+          },
+          {
+            "source": "Thank you",
+            "translation": "Dank je wel"
+          },
+          {
+            "source": "Bye",
+            "translation": "Doei"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Stéphanie",
+    "lists": [
+      {
+        "name": "Test list 1 Steph",
+        "words": [
+          {
+            "source": "Hello",
+            "translation": "Hallo"
+          },
+          {
+            "source": "Thank you",
+            "translation": "Dank je wel"
+          },
+          {
+            "source": "Bye",
+            "translation": "Doei"
+          }
+        ]
+      },
+      {
+        "name": "Test list 2 Steph",
+        "words": [
+          {
+            "source": "Hello",
+            "translation": "Hallo"
+          },
+          {
+            "source": "Thank you",
+            "translation": "Dank je wel"
+          },
+          {
+            "source": "Bye",
+            "translation": "Doei"
+          }
+        ]
+      }
+    ]
+  }
+]
