@@ -1,11 +1,12 @@
 <script setup lang="ts">
-import { computed, watch } from 'vue';
+import { computed, watch, type Ref } from 'vue';
 import { useUserStore } from '@/stores';
 import { LOCAL_STORAGE_CURRENT_USER_LIST } from '@/constants';
+import type { List } from '@/types';
 
 const userStore = useUserStore();
 
-const currentUserList = computed(() => {
+const currentUserList: Ref<List> = computed(() => {
   return userStore.currentUserList
     ? userStore.currentUserList
     : JSON.parse(localStorage.getItem(LOCAL_STORAGE_CURRENT_USER_LIST) ?? '');
@@ -20,13 +21,13 @@ watch(
 
 <template>
   <header>
-    <h1>{{ userStore.currentUserList.name }}</h1>
-    <p>({{ userStore.currentUserList.words.length }} words)</p>
+    <h1>{{ userStore?.currentUserList?.name }}</h1>
+    <p>({{ userStore?.currentUserList?.words.length }} words)</p>
   </header>
 
   <section>
     <table>
-      <tr v-for="word in userStore?.currentUserList?.words">
+      <tr v-for="word in userStore?.currentUserList?.words" :key="word.source">
         <td>{{ word.source }}</td>
         <td>{{ word.translation }}</td>
       </tr>

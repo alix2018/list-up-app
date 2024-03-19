@@ -1,14 +1,15 @@
 <script setup lang="ts">
-import { computed, onMounted, ref, type Ref } from 'vue';
+import { onMounted, ref, type Ref } from 'vue';
 import { useUserStore } from '@/stores';
 import { useRouter } from 'vue-router';
+import type { User } from '@/types';
 
-const jsonData = ref(null);
+const jsonData: Ref<User[] | null> = ref(null);
 
 const userStore = useUserStore();
 const router = useRouter();
 
-function onUserClick(user) {
+function onUserClick(user: User) {
   userStore.setUserData(user);
   router.push({ name: 'lists' });
 }
@@ -28,8 +29,8 @@ onMounted(() => {
   </header>
 
   <section>
-    <button v-for="user in jsonData" :key="user.name" @click="onUserClick(user)">
-      {{ user.name }}
+    <button v-for="user in jsonData" :key="user?.name" @click="onUserClick(user)">
+      {{ user?.name }}
     </button>
   </section>
 </template>
