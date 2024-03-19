@@ -1,20 +1,20 @@
-import { type Ref, ref, watch } from 'vue';
+import { ref } from 'vue';
 import { defineStore } from 'pinia';
+import { LOCAL_STORAGE_CURRENT_USER_DATA, LOCAL_STORAGE_CURRENT_USER_LIST } from '@/constants';
 
 export const useUserStore = defineStore('userStore', () => {
   const currentUserData = ref(null);
   const currentUserList = ref(null);
 
-  function setUser(selectedUser) {
+  function setUserData(selectedUser) {
     currentUserData.value = selectedUser;
-    localStorage.setItem('CURRENT_USER_DATA', JSON.stringify(currentUserData?.value));
+    localStorage.setItem(LOCAL_STORAGE_CURRENT_USER_DATA, JSON.stringify(currentUserData?.value));
   }
 
   function setUserList(selectedUserList) {
     currentUserList.value = selectedUserList;
-    console.log('set user', currentUserList.value);
-    localStorage.setItem('CURRENT_USER_LIST', JSON.stringify(currentUserList?.value));
+    localStorage.setItem(LOCAL_STORAGE_CURRENT_USER_LIST, JSON.stringify(currentUserList?.value));
   }
 
-  return { currentUserData, setUser, currentUserList, setUserList };
+  return { currentUserData, setUserData, currentUserList, setUserList };
 });

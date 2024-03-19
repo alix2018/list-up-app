@@ -1,14 +1,14 @@
 <script setup lang="ts">
 import { computed, watch } from 'vue';
 import { useUserStore } from '@/stores';
-import { useRouter } from 'vue-router';
+import { LOCAL_STORAGE_CURRENT_USER_LIST } from '@/constants';
 
 const userStore = useUserStore();
 
 const currentUserList = computed(() => {
   return userStore.currentUserList
     ? userStore.currentUserList
-    : JSON.parse(localStorage.getItem('CURRENT_USER_LIST') ?? '');
+    : JSON.parse(localStorage.getItem(LOCAL_STORAGE_CURRENT_USER_LIST) ?? '');
 });
 
 watch(
