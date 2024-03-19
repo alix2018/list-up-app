@@ -1,10 +1,11 @@
 <script setup lang="ts">
-import { computed, watch, type Ref } from 'vue';
+import { computed, watch, type Ref, ref } from 'vue';
 import { useUserStore } from '@/stores';
 import { LOCAL_STORAGE_CURRENT_USER_LIST } from '@/constants';
 import type { List } from '@/types';
 
 const userStore = useUserStore();
+const fromSourceToTranslation: Ref<Boolean> = ref(true);
 
 const currentUserList: Ref<List> = computed(() => {
   return userStore.currentUserList
@@ -17,6 +18,10 @@ watch(
   (newValue) => userStore.setUserList(newValue.value),
   { deep: true, immediate: true }
 );
+
+function onWordsSwitch() {
+  fromSourceToTranslation.value = !fromSourceToTranslation.value;
+}
 </script>
 
 <template>
@@ -26,10 +31,17 @@ watch(
   </header>
 
   <section>
+    <button @click="onWordsSwitch">Switch</button>
     <table>
       <tr v-for="word in userStore?.currentUserList?.words" :key="word.source">
-        <td>{{ word.source }}</td>
-        <td>{{ word.translation }}</td>
+        <template v-if="fromSourceToTranslation">
+          <td>{{ word.source }}</td>
+          <td>{{ word.translation }}</td>
+        </template>
+        <template v-else>
+          <td>{{ word.translation }}</td>
+          <td>{{ word.source }}</td>
+        </template>
       </tr>
     </table>
   </section>
@@ -54,7 +66,8 @@ p {
 
 section {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 table,
@@ -63,8 +76,12 @@ td {
   border: 1px solid black;
 }
 
-table {
+button {
   margin-top: 20px;
+}
+
+table {
+  margin-top: 10px;
 }
 
 td {
