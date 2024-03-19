@@ -1,9 +1,21 @@
 <script setup lang="ts">
+import { computed, watch } from 'vue';
 import { useUserStore } from '@/stores';
 import { useRouter } from 'vue-router';
 
 const userStore = useUserStore();
-const router = useRouter();
+
+const currentUserList = computed(() => {
+  return userStore.currentUserList
+    ? userStore.currentUserList
+    : JSON.parse(localStorage.getItem('CURRENT_USER_LIST') ?? '');
+});
+
+watch(
+  () => currentUserList,
+  (newValue) => userStore.setUserList(newValue.value),
+  { deep: true, immediate: true }
+);
 </script>
 
 <template>

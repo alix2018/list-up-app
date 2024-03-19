@@ -1,9 +1,22 @@
 <script setup lang="ts">
+import { computed, watch } from 'vue';
 import { useUserStore } from '@/stores';
 import { useRouter } from 'vue-router';
 
 const userStore = useUserStore();
 const router = useRouter();
+
+const currentUserData = computed(() => {
+  return userStore.currentUserData
+    ? userStore.currentUserData
+    : JSON.parse(localStorage.getItem('CURRENT_USER_DATA') ?? '');
+});
+
+watch(
+  () => currentUserData,
+  (newValue) => userStore.setUserData(newValue.value),
+  { deep: true, immediate: true }
+);
 
 function onListClick(list) {
   userStore.setUserList(list);
@@ -17,7 +30,7 @@ function onListClick(list) {
   </header>
 
   <section>
-    <button v-for="list in userStore?.userData?.lists" :key="list.name" @click="onListClick(list)">
+    <button v-for="list in currentUserData.lists" :key="list.name" @click="onListClick(list)">
       {{ list.name }} <br />
       ({{ list.words.length }} words)
     </button>

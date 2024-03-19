@@ -9,7 +9,7 @@ const userStore = useUserStore();
 const router = useRouter();
 
 function onUserClick(user) {
-  userStore.setUser(user);
+  userStore.setUserData(user);
   router.push({ name: 'lists' });
 }
 
