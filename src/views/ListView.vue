@@ -1,11 +1,18 @@
 <script setup lang="ts">
 import { computed, watch, type Ref, ref } from 'vue';
+import MainHeader from '@/components/MainHeader.vue';
 import { useUserStore } from '@/stores';
+import { useRouter } from 'vue-router';
 import { LOCAL_STORAGE_CURRENT_USER_LIST } from '@/constants';
 import type { List } from '@/types';
 
 const userStore = useUserStore();
+const router = useRouter();
 const fromSourceToTranslation: Ref<Boolean> = ref(true);
+
+const subtitle: Ref<string> = computed(() => {
+  return `(${userStore?.currentUserList?.words.length} words)`;
+});
 
 const currentUserList: Ref<List> = computed(() => {
   return userStore.currentUserList
@@ -22,13 +29,18 @@ watch(
 function onWordsSwitch() {
   fromSourceToTranslation.value = !fromSourceToTranslation.value;
 }
+
+// function onFlashcardsClick() {
+//   router.push({ name: 'flashcards-mode' });
+// }
+
+function onLearnClick() {
+  router.push({ name: 'learning-mode' });
+}
 </script>
 
 <template>
-  <header>
-    <h1>{{ userStore?.currentUserList?.name }}</h1>
-    <p>({{ userStore?.currentUserList?.words.length }} words)</p>
-  </header>
+  <MainHeader :title="userStore?.currentUserList?.name" :subtitle="subtitle" showBackButton />
 
   <section>
     <button @click="onWordsSwitch">Switch</button>
@@ -44,26 +56,12 @@ function onWordsSwitch() {
         </template>
       </tr>
     </table>
+    <!-- <button @click="onFlashcardsClick">Flashcards</button> -->
+    <button @click="onLearnClick">Learn</button>
   </section>
 </template>
 
 <style scoped>
-header {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  /* padding: 0 25%; */
-}
-
-h1 {
-  margin-bottom: 0;
-}
-
-p {
-  margin-top: 0;
-}
-
 section {
   display: flex;
   flex-direction: column;

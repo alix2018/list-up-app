@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { computed, watch, type Ref } from 'vue';
+import MainHeader from '@/components/MainHeader.vue';
 import { useUserStore } from '@/stores';
 import { useRouter } from 'vue-router';
 import { LOCAL_STORAGE_CURRENT_USER_DATA } from '@/constants';
@@ -27,9 +28,7 @@ function onListClick(list: List) {
 </script>
 
 <template>
-  <header>
-    <h1>My lists</h1>
-  </header>
+  <MainHeader title="My lists" showBackButton />
 
   <section>
     <button v-for="list in currentUserData?.lists" :key="list?.name" @click="onListClick(list)">
@@ -40,7 +39,6 @@ function onListClick(list: List) {
 </template>
 
 <style scoped>
-header,
 section {
   display: flex;
   justify-content: center;

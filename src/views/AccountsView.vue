@@ -3,6 +3,7 @@ import { onMounted, ref, type Ref } from 'vue';
 import { useUserStore } from '@/stores';
 import { useRouter } from 'vue-router';
 import type { User } from '@/types';
+import MainHeader from '@/components/MainHeader.vue';
 
 const jsonData: Ref<User[] | null> = ref(null);
 
@@ -24,9 +25,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <header>
-    <h1>List up!</h1>
-  </header>
+  <MainHeader title="List up!" />
 
   <section>
     <button v-for="user in jsonData" :key="user?.name" @click="onUserClick(user)">
@@ -36,7 +35,6 @@ onMounted(() => {
 </template>
 
 <style scoped>
-header,
 section {
   display: flex;
   justify-content: center;
