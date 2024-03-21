@@ -1,12 +1,13 @@
 <script setup lang="ts">
 import { computed, watch, type Ref, ref } from 'vue';
 import MainHeader from '@/components/MainHeader.vue';
-import { useUserStore } from '@/stores';
+import { useLearningStore, useUserStore } from '@/stores';
 import { useRouter } from 'vue-router';
 import { LOCAL_STORAGE_CURRENT_USER_LIST } from '@/constants';
-import type { List } from '@/types';
+import type { List, Word } from '@/types';
 
 const userStore = useUserStore();
+const learningStore = useLearningStore();
 const router = useRouter();
 const fromSourceToTranslation: Ref<Boolean> = ref(true);
 
@@ -34,13 +35,29 @@ function onWordsSwitch() {
 //   router.push({ name: 'flashcards-mode' });
 // }
 
+function selectRandomElements(array: Word[], x: number) {
+  const shuffledArray = [...array];
+
+  for (let i = shuffledArray.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]];
+  }
+
+  return shuffledArray.slice(0, x);
+}
+
 function onLearnClick() {
-  router.push({ name: 'learning-mode' });
+  if (userStore.currentUserList?.words) {
+    const res = selectRandomElements(userStore.currentUserList.words, 10);
+    console.log('res', res);
+    learningStore.setCurrentLearningList(res);
+    router.push({ name: 'learning-mode' });
+  }
 }
 </script>
 
 <template>
-  <MainHeader :title="userStore?.currentUserList?.name" :subtitle="subtitle" showBackButton />
+  <MainHeader :title="userStore?.currentUserList?.name" :subtitle="subtitle" backRoute="lists" />
 
   <section>
     <button @click="onWordsSwitch">Switch</button>

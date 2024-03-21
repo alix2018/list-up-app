@@ -1,4 +1,6 @@
 export type List = {
   name: string;
-  words: Array<{ source: string; translation: string }>;
+  words: Word[];
 } | null;
+
+export type Word = { source: string; translation: string };

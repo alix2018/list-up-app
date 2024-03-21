@@ -5,19 +5,23 @@ const router = useRouter();
 type Props = {
   title?: string;
   subtitle?: string;
-  showBackButton: boolean;
+  backRoute: string | undefined;
 };
 
-withDefaults(defineProps<Props>(), {
+const props = withDefaults(defineProps<Props>(), {
   title: '',
   subtitle: '',
-  showBackButton: false
+  backRoute: undefined
 });
+
+function onBackButtonClick() {
+  router.push({ name: props.backRoute });
+}
 </script>
 
 <template>
   <header>
-    <button v-if="showBackButton" @click="router.go(-1)">Back</button>
+    <button v-if="backRoute" @click="onBackButtonClick">Back</button>
     <h1>{{ title }}</h1>
     <p>{{ subtitle }}</p>
   </header>
