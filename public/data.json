@@ -45,16 +45,64 @@
         "name": "Test list 1 Steph",
         "words": [
           {
-            "source": "Hello",
-            "translation": "Hallo"
+            "source": "Table",
+            "translation": "Tafle"
           },
           {
-            "source": "Thank you",
-            "translation": "Dank je wel"
+            "source": "Chair",
+            "translation": "Stoel"
           },
           {
-            "source": "Bye",
-            "translation": "Doei"
+            "source": "Couch",
+            "translation": "Bank"
+          },
+          {
+            "source": "Television",
+            "translation": "Televisie"
+          },
+          {
+            "source": "Knife",
+            "translation": "Mes"
+          },
+          {
+            "source": "Spoon",
+            "translation": "Lepel"
+          },
+          {
+            "source": "Fork",
+            "translation": "Vork"
+          },
+          {
+            "source": "Music",
+            "translation": "Musiek"
+          },
+          {
+            "source": "Phone",
+            "translation": "Telefoon"
+          },
+          {
+            "source": "Screen",
+            "translation": "Scherm"
+          },
+          {
+            "source": "Living room",
+            "translation": "Woonkamer"
+          },
+          {
+            "source": "Kitchen",
+            "translation": "Keuken"
+          },
+          {
+            "source": "Cupboard",
+            "translation": "Kast"
+          },
+          {
+            "source": "Fridge",
+            "translation": "Koelkast"
+          },
+          {
+            "source": "Shelf",
+            "translation": "Plank"
           }
         ]
       },

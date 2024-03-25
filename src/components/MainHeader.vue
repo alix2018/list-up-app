@@ -5,7 +5,7 @@ const router = useRouter();
 type Props = {
   title?: string;
   subtitle?: string;
-  backRoute: string | undefined;
+  backRoute?: string | undefined;
 };
 
 const props = withDefaults(defineProps<Props>(), {
