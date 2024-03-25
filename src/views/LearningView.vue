@@ -76,7 +76,7 @@ function verifyTranslation() {
     goToNext();
   } else {
     learningStore.incorrectList.push(currentWord);
-    isCorrection.value = !isCorrection.value;
+    isCorrection.value = true;
   }
 }
 
@@ -116,7 +116,6 @@ function createNextSubsetLists() {
 }
 
 onMounted(() => {
-  console.log('on mounted!');
   initSubsetLists();
 });
 
