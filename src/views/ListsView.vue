@@ -28,7 +28,7 @@ function onListClick(list: List) {
 </script>
 
 <template>
-  <MainHeader title="My lists" showBackButton />
+  <MainHeader title="My lists" backRoute="accounts" />
 
   <section>
     <button v-for="list in currentUserData?.lists" :key="list?.name" @click="onListClick(list)">

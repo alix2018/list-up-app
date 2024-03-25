@@ -31,16 +31,18 @@ function onWordsSwitch() {
 }
 
 // function onFlashcardsClick() {
-//   router.push({ name: 'flashcards-mode' });
+//   router.push({ name: 'flashcards' });
 // }
 
 function onLearnClick() {
-  router.push({ name: 'learning-mode' });
+  if (userStore.currentUserList?.words) {
+    router.push({ name: 'learning' });
+  }
 }
 </script>
 
 <template>
-  <MainHeader :title="userStore?.currentUserList?.name" :subtitle="subtitle" showBackButton />
+  <MainHeader :title="userStore?.currentUserList?.name" :subtitle="subtitle" backRoute="lists" />
 
   <section>
     <button @click="onWordsSwitch">Switch</button>
