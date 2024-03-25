@@ -31,12 +31,12 @@ function onWordsSwitch() {
 }
 
 // function onFlashcardsClick() {
-//   router.push({ name: 'flashcards-mode' });
+//   router.push({ name: 'flashcards' });
 // }
 
 function onLearnClick() {
   if (userStore.currentUserList?.words) {
-    router.push({ name: 'learning-mode' });
+    router.push({ name: 'learning' });
   }
 }
 </script>
