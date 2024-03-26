@@ -41,7 +41,7 @@ watch(
 
 function onPassClick() {
   isPassed.value = true;
-  isCorrection.value = false;
+  isCorrection.value = true;
 }
 
 function markAsCorrect() {
@@ -152,12 +152,12 @@ onUnmounted(() => {
 section {
   display: flex;
   justify-content: center;
-  padding: 0 25%;
+  padding: 0 20%;
 }
 
 section {
   flex-direction: column;
-  padding: 20px 25%;
+  padding: 20px 20%;
 }
 
 button input {

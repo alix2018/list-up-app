@@ -1,8 +1,7 @@
 @import './base.css';
 
 body {
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding: 30px 7%;
   background-color: var(--color-light-purple);
   font-family: 'Lato', sans-serif;
   color: var(--color-black);
@@ -10,4 +9,6 @@ body {
 
 h1 {
   margin-bottom: 0;
+  text-align: center;
+  line-height: 34px;
 }

@@ -36,7 +36,7 @@ function onBackButtonClick() {
 <style scoped>
 button {
   position: absolute;
-  left: 10%;
+  left: 7%;
   top: 30x;
 }
 
@@ -45,7 +45,7 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0 25%;
+  padding: 0 44px;
 }
 
 p {

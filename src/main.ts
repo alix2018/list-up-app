@@ -29,7 +29,8 @@ const vuetify = createVuetify({
   defaults: {
     VBtn: {
       rounded: 'sm',
-      elevation: 4
+      elevation: 4,
+      color: '#5763b7'
     }
   }
 });

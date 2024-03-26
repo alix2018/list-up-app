@@ -31,30 +31,35 @@ function onListClick(list: List) {
   <MainHeader title="My lists" backRoute="accounts" />
 
   <section>
-    <v-btn v-for="list in currentUserData?.lists" :key="list?.name" @click="onListClick(list)">
-      {{ list?.name }} <br />
-      ({{ list?.words.length }} words)
-    </v-btn>
+    <v-card
+      v-for="list in currentUserData?.lists"
+      :key="list?.name"
+      @click="onListClick(list)"
+      class="card"
+      elevation="4"
+      max-width="344"
+    >
+      <v-card-item class="card-item">
+        <v-card-title>
+          {{ list?.name }}
+        </v-card-title>
+        <v-card-subtitle class="card-subtitle"> {{ list?.words.length }} words </v-card-subtitle>
+      </v-card-item>
+    </v-card>
   </section>
 </template>
 
 <style scoped>
 section {
   display: flex;
-  justify-content: center;
-  padding: 0 25%;
-}
-
-section {
   flex-direction: column;
-  padding: 20px 25%;
+  align-items: center;
+  margin: 0;
 }
 
-button {
-  margin-top: 25px;
-}
-
-button:first-child {
-  margin-top: 0;
+.card {
+  width: 100%;
+  margin-top: 20px;
+  cursor: pointer;
 }
 </style>

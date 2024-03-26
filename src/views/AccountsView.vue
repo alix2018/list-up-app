@@ -28,7 +28,7 @@ onMounted(() => {
   <MainHeader title="List up!" />
 
   <section>
-    <v-btn v-for="user in jsonData" :key="user?.name" @click="onUserClick(user)">
+    <v-btn v-for="user in jsonData" :key="user?.name" class="button" @click="onUserClick(user)">
       {{ user?.name }}
     </v-btn>
   </section>
@@ -38,19 +38,15 @@ onMounted(() => {
 section {
   display: flex;
   justify-content: center;
-  padding: 0 25%;
-}
-
-section {
   flex-direction: column;
-  padding: 20px 25%;
+  padding: 40px 0;
 }
 
-button {
-  margin-top: 25px;
+.button {
+  margin-top: 20px;
 }
 
-button:first-child {
+.button:first-child {
   margin-top: 0;
 }
 </style>

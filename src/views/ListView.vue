@@ -26,12 +26,8 @@ watch(
   { deep: true, immediate: true }
 );
 
-function onWordsSwitch() {
-  fromSourceToTranslation.value = !fromSourceToTranslation.value;
-}
-
-// function onFlashcardsClick() {
-//   router.push({ name: 'flashcards' });
+// function onWordsSwitch() {
+//   fromSourceToTranslation.value = !fromSourceToTranslation.value;
 // }
 
 function onLearnClick() {
@@ -42,24 +38,29 @@ function onLearnClick() {
 </script>
 
 <template>
+  <!-- TODO: Make a grid to compute the proper height for the table for every screen -->
+
   <MainHeader :title="userStore?.currentUserList?.name" :subtitle="subtitle" backRoute="lists" />
 
   <section>
-    <v-btn @click="onWordsSwitch">Switch</v-btn>
-    <table>
-      <tr v-for="word in userStore?.currentUserList?.words" :key="word.source">
-        <template v-if="fromSourceToTranslation">
+    <!-- <v-btn @click="onWordsSwitch">Switch</v-btn> -->
+
+    <v-table class="table" height="450px" fixed-header density="comfortable" sortable>
+      <thead class="thread">
+        <tr>
+          <th>Source</th>
+          <th>Translation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="word in userStore?.currentUserList?.words" :key="word.source">
           <td>{{ word.source }}</td>
           <td>{{ word.translation }}</td>
-        </template>
-        <template v-else>
-          <td>{{ word.translation }}</td>
-          <td>{{ word.source }}</td>
-        </template>
-      </tr>
-    </table>
-    <!-- <v-btn @click="onFlashcardsClick">Flashcards</v-btn> -->
-    <v-btn @click="onLearnClick">Learn</v-btn>
+        </tr>
+      </tbody>
+    </v-table>
+
+    <v-btn class="button" @click="onLearnClick">Learn</v-btn>
   </section>
 </template>
 
@@ -70,14 +71,18 @@ section {
   align-items: center;
 }
 
-table,
-th,
-td {
-  border: 1px solid black;
+.table {
+  margin-top: 30px;
+  width: 100%;
 }
 
-button {
+.thread {
+  font-weight: 900;
+}
+
+.button {
   margin-top: 20px;
+  width: 100%;
 }
 
 table {
