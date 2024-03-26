@@ -28,9 +28,9 @@ onMounted(() => {
   <MainHeader title="List up!" />
 
   <section>
-    <button v-for="user in jsonData" :key="user?.name" @click="onUserClick(user)">
+    <v-btn v-for="user in jsonData" :key="user?.name" @click="onUserClick(user)">
       {{ user?.name }}
-    </button>
+    </v-btn>
   </section>
 </template>
 

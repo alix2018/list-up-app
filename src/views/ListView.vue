@@ -45,7 +45,7 @@ function onLearnClick() {
   <MainHeader :title="userStore?.currentUserList?.name" :subtitle="subtitle" backRoute="lists" />
 
   <section>
-    <button @click="onWordsSwitch">Switch</button>
+    <v-btn @click="onWordsSwitch">Switch</v-btn>
     <table>
       <tr v-for="word in userStore?.currentUserList?.words" :key="word.source">
         <template v-if="fromSourceToTranslation">
@@ -58,8 +58,8 @@ function onLearnClick() {
         </template>
       </tr>
     </table>
-    <!-- <button @click="onFlashcardsClick">Flashcards</button> -->
-    <button @click="onLearnClick">Learn</button>
+    <!-- <v-btn @click="onFlashcardsClick">Flashcards</v-btn> -->
+    <v-btn @click="onLearnClick">Learn</v-btn>
   </section>
 </template>
 

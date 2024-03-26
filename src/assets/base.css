@@ -1,1 +1,9 @@
 /* color palette from <https://github.com/vuejs/theme> */
+
+:root {
+  --color-light-purple: #dce0ff;
+  --color-medium-purple: #9fa8ea;
+  --color-dark-purple: #8992d1;
+  --color-black: #181c1e;
+  --color-white: #ffffff;
+}

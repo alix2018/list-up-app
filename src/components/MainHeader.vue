@@ -21,7 +21,13 @@ function onBackButtonClick() {
 
 <template>
   <header>
-    <button v-if="backRoute" @click="onBackButtonClick">Back</button>
+    <v-btn
+      v-if="backRoute"
+      @click="onBackButtonClick"
+      rounded="xl"
+      icon="mdi-arrow-left-thick"
+      size="small"
+    ></v-btn>
     <h1>{{ title }}</h1>
     <p>{{ subtitle }}</p>
   </header>
@@ -40,10 +46,6 @@ header {
   justify-content: center;
   align-items: center;
   padding: 0 25%;
-}
-
-h1 {
-  margin-bottom: 0;
 }
 
 p {

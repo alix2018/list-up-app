@@ -31,10 +31,10 @@ function onListClick(list: List) {
   <MainHeader title="My lists" backRoute="accounts" />
 
   <section>
-    <button v-for="list in currentUserData?.lists" :key="list?.name" @click="onListClick(list)">
+    <v-btn v-for="list in currentUserData?.lists" :key="list?.name" @click="onListClick(list)">
       {{ list?.name }} <br />
       ({{ list?.words.length }} words)
-    </button>
+    </v-btn>
   </section>
 </template>
 

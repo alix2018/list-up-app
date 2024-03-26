@@ -126,23 +126,24 @@ onUnmounted(() => {
 </script>
 
 <template>
+  <!-- Add progress bar: v-progress-linear -->
   <MainHeader title="Learn" :subtitle="subtitle" backRoute="list" />
 
   <section>
     {{ learningStore.subsetList?.[subsetIndex]?.source }}
     <form v-if="!isCorrection" @submit.prevent="verifyTranslation">
-      <input v-model="answer" />
-      <button type="submit">Submit</button>
+      <v-text-field v-model="answer" />
+      <v-btn type="submit">Submit</v-btn>
       <br />
-      <button class="btn-pass" @click="onPassClick">Pass 🙅‍♀️</button>
+      <v-btn class="btn-pass" @click="onPassClick">Pass 🙅‍♀️</v-btn>
     </form>
     <template v-else>
       <p>Correct answer: {{ learningStore.subsetList?.[subsetIndex]?.translation }}</p>
       <div class="user-answer" v-if="!isPassed">
         <p>You said: {{ answer }}</p>
-        <button @click="markAsCorrect">I was right</button>
+        <v-btn @click="markAsCorrect">I was right</v-btn>
       </div>
-      <button class="btn-next" @click="goToNext">Next</button>
+      <v-btn class="btn-next" @click="goToNext">Next</v-btn>
     </template>
   </section>
 </template>
