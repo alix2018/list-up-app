@@ -127,7 +127,7 @@ onUnmounted(() => {
 
 <template>
   <!-- Add progress bar: v-progress-linear -->
-  <MainHeader title="Learn" :subtitle="subtitle" backRoute="list" />
+  <MainHeader title="Learn" :subtitle="subtitle" backRoute="list" isCloseButton />
 
   <section>
     <p class="current-word">{{ learningStore.subsetList?.[subsetIndex]?.source }}</p>
@@ -184,7 +184,7 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 30px 0;
+  padding: 0;
 }
 
 .current-word {
@@ -192,13 +192,10 @@ section {
   font-weight: bold;
 }
 
-.input {
-  margin-top: 20px;
-}
-
 .btn-pass {
   display: block;
   padding: 0;
+  margin-top: 5px;
 }
 
 .user-answer {

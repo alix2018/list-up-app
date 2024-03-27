@@ -39,7 +39,6 @@ section {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  padding: 40px 0;
 }
 
 .button {

@@ -23,29 +23,46 @@ function onBackButtonClick() {
   <header>
     <v-btn
       v-if="backRoute"
-      @click="onBackButtonClick"
       rounded="xl"
       icon="mdi-arrow-left-thick"
-      size="small"
+      size="x-small"
+      class="btn-back"
+      @click="onBackButtonClick"
     ></v-btn>
-    <h1>{{ title }}</h1>
-    <p>{{ subtitle }}</p>
+    <section>
+      <h1>{{ title }}</h1>
+      <p>{{ subtitle }}</p>
+    </section>
   </header>
 </template>
 
 <style scoped>
-button {
-  position: absolute;
-  left: 7%;
-  top: 30x;
-}
-
 header {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0 44px;
+  padding: 16px;
+  width: calc(100% + 2 * var(--app-side-padding));
+  margin-left: calc(-1 * var(--app-side-padding));
+  margin-right: calc(-1 * var(--app-side-padding));
+  box-shadow:
+    0 4px 8px 0 rgba(87, 99, 183, 0.05),
+    0 6px 20px 0 rgba(87, 99, 183, 0.15);
+  margin-bottom: 34px;
+}
+
+.btn-back {
+  position: absolute;
+  left: var(--app-side-padding);
+  top: 30x;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 48px;
 }
 
 p {

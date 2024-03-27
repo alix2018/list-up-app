@@ -72,7 +72,6 @@ section {
 }
 
 .table {
-  margin-top: 30px;
   width: 100%;
 }
 

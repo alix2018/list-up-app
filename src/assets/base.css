@@ -2,11 +2,15 @@
 
 :root {
   --color-light-purple: #dce0ff;
-  --color-medium-purple: #9fa8ea;
+  --color-medium-purple: #b5baed;
+  /* --color-dark-purple: rgb(87, 99, 183); */
   --color-dark-purple: #5763b7;
+  /* --color-dark-purple: rgb(87, 99, 183); */
   --color-black: #181c1e;
   --color-white: #ffffff;
 
   --color-success: #23924f;
   --color-danger: #ca2448;
+
+  --app-side-padding: 28px;
 }

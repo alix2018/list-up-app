@@ -57,6 +57,10 @@ section {
   margin: 0;
 }
 
+.card:first-child {
+  margin-top: 0;
+}
+
 .card {
   width: 100%;
   margin-top: 20px;
