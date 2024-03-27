@@ -21,6 +21,10 @@ const subtitle: Ref<string> = computed(() => {
   return `${learningStore.learnedList.length}/${learningStore.currentList.length}`;
 });
 
+const currentProgress: Ref<number> = computed(
+  () => (learningStore.learnedList.length / learningStore.currentList.length) * 100
+);
+
 const listToLearn: Ref<Word[]> = computed(() => {
   let currentList: Word[] = [];
 
@@ -42,6 +46,8 @@ watch(
 function onPassClick() {
   isPassed.value = true;
   isCorrection.value = true;
+  const currentWord = learningStore.subsetList?.[subsetIndex.value];
+  learningStore.incorrectList.push(currentWord);
 }
 
 function markAsCorrect() {
@@ -126,8 +132,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <!-- Add progress bar: v-progress-linear -->
-  <MainHeader title="Learn" :subtitle="subtitle" backRoute="list" isCloseButton />
+  <MainHeader title="Learn" :subtitle="subtitle" backRoute="list" :progress="currentProgress" />
 
   <section>
     <p class="current-word">{{ learningStore.subsetList?.[subsetIndex]?.source }}</p>

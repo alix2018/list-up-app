@@ -6,12 +6,14 @@ type Props = {
   title?: string;
   subtitle?: string;
   backRoute?: string | undefined;
+  progress: number | null;
 };
 
 const props = withDefaults(defineProps<Props>(), {
   title: '',
   subtitle: '',
-  backRoute: undefined
+  backRoute: undefined,
+  progress: null
 });
 
 function onBackButtonClick() {
@@ -33,11 +35,18 @@ function onBackButtonClick() {
       <h1>{{ title }}</h1>
       <p>{{ subtitle }}</p>
     </section>
+    <v-progress-linear
+      v-if="progress != null && progress >= 0"
+      class="progress"
+      color="#5763b7"
+      :model-value="progress"
+    ></v-progress-linear>
   </header>
 </template>
 
 <style scoped>
 header {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -55,7 +64,6 @@ header {
 .btn-back {
   position: absolute;
   left: var(--app-side-padding);
-  top: 30x;
 }
 
 section {
@@ -67,5 +75,11 @@ section {
 
 p {
   margin-top: 0;
+}
+
+.progress {
+  position: absolute;
+  top: auto !important;
+  bottom: 0;
 }
 </style>
