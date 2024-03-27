@@ -1,5 +1,6 @@
 /* color palette from <https://github.com/vuejs/theme> */
 
+/* TODO: Use the variables in the whole app instead of hardcoded values */
 :root {
   --color-light-purple: #dce0ff;
   --color-medium-purple: #b5baed;
@@ -13,4 +14,5 @@
   --color-danger: #ca2448;
 
   --app-side-padding: 28px;
+  --app-bottom-padding: 20px;
 }

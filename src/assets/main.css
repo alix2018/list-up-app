@@ -1,7 +1,19 @@
 @import './base.css';
 
+html,
 body {
-  padding: 0 var(--app-side-padding) 20px;
+  height: 100%;
+  margin: 0;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+body {
+  padding: 0 var(--app-side-padding) var(--app-bottom-padding);
   background-color: var(--color-light-purple);
   font-family: 'Lato', sans-serif;
   color: var(--color-black);

@@ -50,6 +50,7 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  flex: none;
   align-items: center;
   padding: 16px;
   width: calc(100% + 2 * var(--app-side-padding));

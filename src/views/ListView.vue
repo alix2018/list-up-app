@@ -38,14 +38,12 @@ function onLearnClick() {
 </script>
 
 <template>
-  <!-- TODO: Make a grid to compute the proper height for the table for every screen -->
-
   <MainHeader :title="userStore?.currentUserList?.name" :subtitle="subtitle" backRoute="lists" />
 
   <section>
     <!-- <v-btn @click="onWordsSwitch">Switch</v-btn> -->
 
-    <v-table class="table" height="450px" fixed-header density="comfortable" sortable>
+    <v-table class="table" fixed-header density="comfortable">
       <thead>
         <tr>
           <th class="th">Source</th>
@@ -59,9 +57,8 @@ function onLearnClick() {
         </tr>
       </tbody>
     </v-table>
-
-    <v-btn class="button" @click="onLearnClick">Learn</v-btn>
   </section>
+  <v-btn class="btn-learn" @click="onLearnClick">Learn</v-btn>
 </template>
 
 <style scoped>
@@ -69,6 +66,8 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex: 1;
+  overflow-y: auto;
 }
 
 .table {
@@ -79,9 +78,10 @@ section {
   font-weight: bold !important;
 }
 
-.button {
+.btn-learn {
   margin-top: 20px;
   width: 100%;
+  flex: none;
 }
 
 table {
