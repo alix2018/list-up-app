@@ -46,10 +46,10 @@ function onLearnClick() {
     <!-- <v-btn @click="onWordsSwitch">Switch</v-btn> -->
 
     <v-table class="table" height="450px" fixed-header density="comfortable" sortable>
-      <thead class="thread">
+      <thead>
         <tr>
-          <th>Source</th>
-          <th>Translation</th>
+          <th class="th">Source</th>
+          <th class="th">Translation</th>
         </tr>
       </thead>
       <tbody>
@@ -76,8 +76,8 @@ section {
   width: 100%;
 }
 
-.thread {
-  font-weight: 900;
+.th {
+  font-weight: bold !important;
 }
 
 .button {
