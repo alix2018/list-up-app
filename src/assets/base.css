@@ -11,7 +11,7 @@
   --color-danger: #ca2448;
 
   --app-side-padding: 28px;
-  --app-bottom-padding: 20px;
+  --app-bottom-padding: 28px;
 }
 
 @media (min-width: 600px) {

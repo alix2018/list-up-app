@@ -42,6 +42,7 @@ function onAddListClick() {
       class="card"
       elevation="2"
       max-width="344"
+      style="max-width: none"
     >
       <v-card-item class="card-item">
         <v-card-title>
@@ -56,10 +57,11 @@ function onAddListClick() {
 
 <style scoped>
 section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0;
+  display: block;
+  margin: 0 auto 80px;
+  padding-bottom: 5px;
+  width: 100%;
+  overflow-y: auto;
 }
 
 .card:first-child {
