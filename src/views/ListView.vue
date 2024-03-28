@@ -42,7 +42,7 @@ function onLearnClick() {
 
   <section>
     <!-- <v-btn @click="onWordsSwitch">Switch</v-btn> -->
-
+    <!-- TODO: Make the header sticky -->
     <v-table class="table" density="comfortable" sortable>
       <thead>
         <tr>
