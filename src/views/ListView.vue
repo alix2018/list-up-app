@@ -43,7 +43,7 @@ function onLearnClick() {
   <section>
     <!-- <v-btn @click="onWordsSwitch">Switch</v-btn> -->
 
-    <v-table class="table" fixed-header density="comfortable">
+    <v-table class="table" density="comfortable" sortable>
       <thead>
         <tr>
           <th class="th">Source</th>
