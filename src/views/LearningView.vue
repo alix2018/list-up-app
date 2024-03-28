@@ -21,6 +21,10 @@ const subtitle: Ref<string> = computed(() => {
   return `${learningStore.learnedList.length}/${learningStore.currentList.length}`;
 });
 
+const currentProgress: Ref<number> = computed(
+  () => (learningStore.learnedList.length / learningStore.currentList.length) * 100
+);
+
 const listToLearn: Ref<Word[]> = computed(() => {
   let currentList: Word[] = [];
 
@@ -41,7 +45,9 @@ watch(
 
 function onPassClick() {
   isPassed.value = true;
-  isCorrection.value = false;
+  isCorrection.value = true;
+  const currentWord = learningStore.subsetList?.[subsetIndex.value];
+  learningStore.incorrectList.push(currentWord);
 }
 
 function markAsCorrect() {
@@ -126,23 +132,54 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <MainHeader title="Learn" :subtitle="subtitle" backRoute="list" />
+  <MainHeader title="Learn" :subtitle="subtitle" backRoute="list" :progress="currentProgress" />
 
   <section>
-    {{ learningStore.subsetList?.[subsetIndex]?.source }}
+    <p class="current-word">{{ learningStore.subsetList?.[subsetIndex]?.source }}</p>
     <form v-if="!isCorrection" @submit.prevent="verifyTranslation">
-      <input v-model="answer" />
-      <button type="submit">Submit</button>
-      <br />
-      <button class="btn-pass" @click="onPassClick">Pass 🙅‍♀️</button>
+      <v-text-field
+        class="input"
+        label="Answer"
+        variant="underlined"
+        v-model="answer"
+        append-inner-icon="mdi-send"
+        @click:append-inner="verifyTranslation"
+      />
+      <v-btn variant="text" elevation="0" class="btn-pass" @click="onPassClick">Pass 🙅‍♀️</v-btn>
     </form>
     <template v-else>
-      <p>Correct answer: {{ learningStore.subsetList?.[subsetIndex]?.translation }}</p>
-      <div class="user-answer" v-if="!isPassed">
-        <p>You said: {{ answer }}</p>
-        <button @click="markAsCorrect">I was right</button>
-      </div>
-      <button class="btn-next" @click="goToNext">Next</button>
+      <template v-if="!isPassed">
+        <div class="user-answer">
+          <p class="user-answer-label">Your answer:</p>
+          <v-btn
+            variant="text"
+            elevation="0"
+            class="btn-correct"
+            append-icon="mdi-check"
+            @click="markAsCorrect"
+            >I was right</v-btn
+          >
+        </div>
+
+        <v-text-field
+          class="incorrect-answer"
+          variant="outlined"
+          v-model="answer"
+          prepend-inner-icon="mdi-close"
+          readonly
+        />
+      </template>
+
+      <p class="correct-answer-label">Correct answer:</p>
+      <v-text-field
+        class="correct-answer"
+        variant="outlined"
+        :value="learningStore.subsetList?.[subsetIndex]?.translation"
+        prepend-inner-icon="mdi-check"
+        readonly
+      />
+
+      <v-btn class="btn-next" @click="goToNext">Next</v-btn>
     </template>
   </section>
 </template>
@@ -150,49 +187,56 @@ onUnmounted(() => {
 <style scoped>
 section {
   display: flex;
-  justify-content: center;
-  padding: 0 25%;
-}
-
-section {
   flex-direction: column;
-  padding: 20px 25%;
+  justify-content: center;
+  padding: 0;
 }
 
-button input {
-  margin-top: 30px;
-}
-
-form {
-  margin-top: 10px;
+.current-word {
+  margin-bottom: 20px;
+  font-weight: bold;
 }
 
 .btn-pass {
-  width: fit-content;
-  text-decoration: underline;
-  margin-top: 10px;
-
-  background: none;
-  color: inherit;
-  border: none;
+  display: block;
   padding: 0;
-  font: inherit;
-  cursor: pointer;
-  outline: inherit;
-}
-
-.btn-next {
-  margin-top: 50px;
+  margin-top: 5px;
 }
 
 .user-answer {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
+  justify-content: space-between;
   gap: 10px;
 }
 
 p {
-  margin-top: 20px;
-  margin-bottom: 0;
+  margin: 0;
+}
+
+.user-answer-label {
+  color: var(--color-danger);
+}
+
+.incorrect-answer {
+  margin-top: 5px;
+  color: var(--color-danger);
+}
+
+.btn-correct {
+  padding: 0;
+}
+
+.correct-answer-label {
+  color: var(--color-success);
+}
+
+.correct-answer {
+  margin-top: 10px;
+  color: var(--color-success);
+}
+
+.btn-next {
+  margin-top: 10px;
 }
 </style>

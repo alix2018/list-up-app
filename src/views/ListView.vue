@@ -26,12 +26,8 @@ watch(
   { deep: true, immediate: true }
 );
 
-function onWordsSwitch() {
-  fromSourceToTranslation.value = !fromSourceToTranslation.value;
-}
-
-// function onFlashcardsClick() {
-//   router.push({ name: 'flashcards' });
+// function onWordsSwitch() {
+//   fromSourceToTranslation.value = !fromSourceToTranslation.value;
 // }
 
 function onLearnClick() {
@@ -45,22 +41,24 @@ function onLearnClick() {
   <MainHeader :title="userStore?.currentUserList?.name" :subtitle="subtitle" backRoute="lists" />
 
   <section>
-    <button @click="onWordsSwitch">Switch</button>
-    <table>
-      <tr v-for="word in userStore?.currentUserList?.words" :key="word.source">
-        <template v-if="fromSourceToTranslation">
+    <!-- <v-btn @click="onWordsSwitch">Switch</v-btn> -->
+
+    <v-table class="table" fixed-header density="comfortable">
+      <thead>
+        <tr>
+          <th class="th">Source</th>
+          <th class="th">Translation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="word in userStore?.currentUserList?.words" :key="word.source">
           <td>{{ word.source }}</td>
           <td>{{ word.translation }}</td>
-        </template>
-        <template v-else>
-          <td>{{ word.translation }}</td>
-          <td>{{ word.source }}</td>
-        </template>
-      </tr>
-    </table>
-    <!-- <button @click="onFlashcardsClick">Flashcards</button> -->
-    <button @click="onLearnClick">Learn</button>
+        </tr>
+      </tbody>
+    </v-table>
   </section>
+  <v-btn class="btn-learn" @click="onLearnClick">Learn</v-btn>
 </template>
 
 <style scoped>
@@ -68,16 +66,22 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex: 1;
+  overflow-y: auto;
 }
 
-table,
-th,
-td {
-  border: 1px solid black;
+.table {
+  width: 100%;
 }
 
-button {
+.th {
+  font-weight: bold !important;
+}
+
+.btn-learn {
   margin-top: 20px;
+  width: 100%;
+  flex: none;
 }
 
 table {
