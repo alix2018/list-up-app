@@ -18,6 +18,8 @@
     "@mdi/font": "^7.4.47",
     "@mdi/js": "^7.4.47",
     "pinia": "^2.1.7",
+    "vite-plugin-pwa": "^0.19.7",
+    "vite-plugin-static-copy": "^1.0.2",
     "vue": "^3.4.21",
     "vue-router": "^4.3.0",
     "vuetify": "^3.5.11"

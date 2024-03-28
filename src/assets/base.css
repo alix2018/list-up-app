@@ -2,7 +2,7 @@
 
 :root {
   --color-light-purple: #dce0ff;
-  --color-medium-purple: #b5baed;
+  /* --color-medium-purple: #b5baed; */
   --color-dark-purple: #5763b7;
   --color-black: #181c1e;
   --color-white: #ffffff;
@@ -11,5 +11,29 @@
   --color-danger: #ca2448;
 
   --app-side-padding: 28px;
-  --app-bottom-padding: 20px;
+  --app-bottom-padding: 28px;
+}
+
+@media (min-width: 600px) {
+  :root {
+    --app-side-padding: 100px;
+  }
+}
+
+@media (min-width: 768px) {
+  :root {
+    --app-side-padding: 200px;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --app-side-padding: 400px;
+  }
+}
+
+@media (min-width: 1600px) {
+  :root {
+    --app-side-padding: 600px;
+  }
 }

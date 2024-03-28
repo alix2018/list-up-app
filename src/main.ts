@@ -16,6 +16,7 @@ import { createVuetify } from 'vuetify';
 import * as components from 'vuetify/components';
 import * as directives from 'vuetify/directives';
 import { aliases, mdi } from 'vuetify/iconsets/mdi';
+import { VBtn } from 'vuetify/components/VBtn';
 import '@mdi/font/css/materialdesignicons.css';
 
 const vuetify = createVuetify({
@@ -28,12 +29,21 @@ const vuetify = createVuetify({
       mdi
     }
   },
+  aliases: {
+    VBtn: VBtn,
+    VBtnText: VBtn
+  },
   defaults: {
     VBtn: {
       rounded: 'sm',
       elevation: 2,
       color: 'var(--color-dark-purple)',
       style: 'color: white;'
+    },
+    VBtnText: {
+      variant: 'text',
+      elevation: 0,
+      color: 'var(--color-dark-purple)'
     }
   }
 });

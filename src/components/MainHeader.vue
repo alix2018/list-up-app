@@ -6,7 +6,7 @@ type Props = {
   title?: string;
   subtitle?: string;
   backRoute?: string | undefined;
-  progress: number | null;
+  progress?: number | null;
 };
 
 const props = withDefaults(defineProps<Props>(), {
