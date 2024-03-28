@@ -3,36 +3,71 @@
     "name": "Shannon",
     "lists": [
       {
-        "name": "Test list 1 Shannon",
+        "name": "Les temps primitifs",
         "words": [
           {
-            "source": "Hello",
-            "translation": "Hallo"
+            "source": "mordre",
+            "translation": "bijten / beet - beten / gebeten"
           },
           {
-            "source": "Thank you",
-            "translation": "Dank je wel"
+            "source": "apparaître, s'avérer",
+            "translation": "blijken / bleek - bleken / is gebleken"
           },
           {
-            "source": "Bye",
-            "translation": "Doei"
-          }
-        ]
-      },
-      {
-        "name": "Test list 2 Shannon",
-        "words": [
-          {
-            "source": "Hello",
-            "translation": "Hallo"
+            "source": "rester",
+            "translation": "blijven / bleef - bleven / is gebleven"
           },
           {
-            "source": "Thank you",
-            "translation": "Dank je wel"
+            "source": "glisser",
+            "translation": "glijden / gleed - gleden / gegleden"
           },
           {
-            "source": "Bye",
-            "translation": "Doei"
+            "source": "saisir",
+            "translation": "grijpen / greep - grepen / gegrepen"
+          },
+          {
+            "source": "regarder",
+            "translation": "kijken / keek - keken / gekeken"
+          },
+          {
+            "source": "pincer",
+            "translation": "knijpen / kneep - knepen / geknepen"
+          },
+          {
+            "source": "recevoir",
+            "translation": "krijgen / kreeg - kregen / gekregen"
+          },
+          {
+            "source": "souffrir",
+            "translation": "lijden / leed - leden / geleden"
+          },
+          {
+            "source": "paraître",
+            "translation": "lijken / leek - leken / geleken"
+          },
+          {
+            "source": "louer, vanter",
+            "translation": "prijzen / prees - prezen / geprezen"
+          },
+          {
+            "source": "rouler, aller (véhicule)",
+            "translation": "rijden / reed - reden / gereden"
+          },
+          {
+            "source": "s'élever",
+            "translation": "rijzen / rees - rezen / is gerezen"
+          },
+          {
+            "source": "sembler",
+            "translation": "schijnen / scheen - schenen / geschenen"
+          },
+          {
+            "source": "marcher",
+            "translation": "schrijden / schreed - schreden / is - heeft geschreden"
+          },
+          {
+            "source": "écrire",
+            "translation": "schrijven / schreef - schreven / geschreven"
           }
         ]
       }
@@ -42,7 +77,7 @@
     "name": "Stéphanie",
     "lists": [
       {
-        "name": "Test list 1 Steph",
+        "name": "House",
         "words": [
           {
             "source": "Table",
@@ -107,7 +142,242 @@
         ]
       },
       {
-        "name": "Test list 2 Steph",
+        "name": "Horse riding",
+        "words": [
+          {
+            "source": "Cheval",
+            "translation": "Paard"
+          },
+          {
+            "source": "Cavalier",
+            "translation": "Ruiter"
+          },
+          {
+            "source": "Dressage",
+            "translation": "Dressuur"
+          },
+          {
+            "source": "Galop",
+            "translation": "Galop"
+          },
+          {
+            "source": "Ecurie",
+            "translation": "Stal"
+          },
+          {
+            "source": "Centre d'equestre",
+            "translation": "Manege"
+          },
+          {
+            "source": "Trot",
+            "translation": "Draf"
+          },
+          {
+            "source": "La selle",
+            "translation": "Het zadel"
+          },
+          {
+            "source": "Allure",
+            "translation": "Gang"
+          },
+          {
+            "source": "Equilibre",
+            "translation": "Evenwicht"
+          },
+          {
+            "source": "Position",
+            "translation": "Houding"
+          },
+          {
+            "source": "Reculer",
+            "translation": "Achterwaarts gaan"
+          },
+          {
+            "source": "Descendre / To dismount",
+            "translation": "Afstijgen"
+          },
+          {
+            "source": "Monter / To mount",
+            "translation": "Opstijgen"
+          },
+          {
+            "source": "Rêne interieure",
+            "translation": "Binnenteugel"
+          },
+          {
+            "source": "Rêne extérieure",
+            "translation": "Buitenteugel"
+          },
+          {
+            "source": "Raccourcir les rênes / To pick up the reins",
+            "translation": "Teugels oppakken"
+          },
+          {
+            "source": "Récompenser",
+            "translation": "Belonen"
+          },
+          {
+            "source": "Carresser",
+            "translation": "Een klopje geven"
+          },
+          {
+            "source": "Caliner / To pet",
+            "translation": "Aaien"
+          },
+          {
+            "source": "Arrêt",
+            "translation": "Halthouden"
+          }
+        ]
+      },
+      {
+        "name": "Harry Potter - Book 1",
+        "words": [
+          {
+            "source": "mysterious",
+            "translation": "geheimzinnig"
+          },
+          {
+            "source": "thin",
+            "translation": "mager"
+          },
+          {
+            "source": "fence",
+            "translation": "schutting"
+          },
+          {
+            "source": "gluren",
+            "translation": "to peek"
+          },
+          {
+            "source": "fear",
+            "translation": "angst"
+          },
+          {
+            "source": "shame",
+            "translation": "schaamte"
+          },
+          {
+            "source": "thought",
+            "translation": "gedachte"
+          },
+          {
+            "source": "to wake up",
+            "translation": "wakker worden"
+          },
+          {
+            "source": "cloudy",
+            "translation": "bewolkte"
+          },
+          {
+            "source": "to gossip",
+            "translation": "roddelen"
+          },
+          {
+            "source": "flutter, flotter",
+            "translation": "fladderen"
+          },
+          {
+            "source": "briefcase",
+            "translation": "koffertje"
+          },
+          {
+            "source": "kiss",
+            "translation": "zoentje"
+          },
+          {
+            "source": "failed",
+            "translation": "mislukt"
+          },
+          {
+            "source": "to insist",
+            "translation": "dringen"
+          },
+          {
+            "source": "to turn",
+            "translation": "draaien"
+          },
+          {
+            "source": "to confess",
+            "translation": "bekennen"
+          },
+          {
+            "source": "to imagine",
+            "translation": "verbeelden"
+          },
+          {
+            "source": "nowhere to be seen",
+            "translation": "nergens te bekennen"
+          },
+          {
+            "source": "optical illusion",
+            "translation": "gezichtsbedrog"
+          },
+          {
+            "source": "to blink",
+            "translation": "knipperen"
+          },
+          {
+            "source": "to shake",
+            "translation": "schudden"
+          },
+          {
+            "source": "disturbed",
+            "translation": "verstoord"
+          },
+          {
+            "source": "was stuck",
+            "translation": "vastzat"
+          },
+          {
+            "source": "usual",
+            "translation": "gebruikelijk"
+          },
+          {
+            "source": "nowadays",
+            "translation": "tegenwoordig"
+          },
+          {
+            "source": "to whisper",
+            "translation": "fluisteren"
+          },
+          {
+            "source": "to dare",
+            "translation": "durven"
+          },
+          {
+            "source": "suddenly",
+            "translation": "plotseling"
+          },
+          {
+            "source": "to realise",
+            "translation": "beseffen"
+          },
+          {
+            "source": "probably",
+            "translation": "waarschijnlijk"
+          },
+          {
+            "source": "to collect",
+            "translation": "verzamelen"
+          },
+          {
+            "source": "that had to be it",
+            "translation": "dat moest het zijn"
+          },
+          {
+            "source": "what's the point",
+            "translation": "Wat heeft het voor zin"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Test",
+    "lists": [
+      {
+        "name": "Test list 1",
         "words": [
           {
             "source": "Hello",
@@ -124,7 +394,7 @@
         ]
       },
       {
-        "name": "Test list 3 Steph",
+        "name": "Test list 2",
         "words": [
           {
             "source": "Hello",
@@ -141,7 +411,126 @@
         ]
       },
       {
-        "name": "Test list 4 Steph",
+        "name": "Test list 3",
+        "words": [
+          {
+            "source": "Hello",
+            "translation": "Hallo"
+          },
+          {
+            "source": "Thank you",
+            "translation": "Dank je wel"
+          },
+          {
+            "source": "Bye",
+            "translation": "Doei"
+          }
+        ]
+      },
+      {
+        "name": "Test list 4",
+        "words": [
+          {
+            "source": "Hello",
+            "translation": "Hallo"
+          },
+          {
+            "source": "Thank you",
+            "translation": "Dank je wel"
+          },
+          {
+            "source": "Bye",
+            "translation": "Doei"
+          }
+        ]
+      },
+      {
+        "name": "Test list 5",
+        "words": [
+          {
+            "source": "Hello",
+            "translation": "Hallo"
+          },
+          {
+            "source": "Thank you",
+            "translation": "Dank je wel"
+          },
+          {
+            "source": "Bye",
+            "translation": "Doei"
+          }
+        ]
+      },
+      {
+        "name": "Test list 6",
+        "words": [
+          {
+            "source": "Hello",
+            "translation": "Hallo"
+          },
+          {
+            "source": "Thank you",
+            "translation": "Dank je wel"
+          },
+          {
+            "source": "Bye",
+            "translation": "Doei"
+          }
+        ]
+      },
+      {
+        "name": "Test list 7",
+        "words": [
+          {
+            "source": "Hello",
+            "translation": "Hallo"
+          },
+          {
+            "source": "Thank you",
+            "translation": "Dank je wel"
+          },
+          {
+            "source": "Bye",
+            "translation": "Doei"
+          }
+        ]
+      },
+      {
+        "name": "Test list 8",
+        "words": [
+          {
+            "source": "Hello",
+            "translation": "Hallo"
+          },
+          {
+            "source": "Thank you",
+            "translation": "Dank je wel"
+          },
+          {
+            "source": "Bye",
+            "translation": "Doei"
+          }
+        ]
+      },
+      {
+        "name": "Test list 9",
+        "words": [
+          {
+            "source": "Hello",
+            "translation": "Hallo"
+          },
+          {
+            "source": "Thank you",
+            "translation": "Dank je wel"
+          },
+          {
+            "source": "Bye",
+            "translation": "Doei"
+          }
+        ]
+      },
+      {
+        "name": "Test list 10",
         "words": [
           {
             "source": "Hello",
