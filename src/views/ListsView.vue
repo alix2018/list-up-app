@@ -28,7 +28,7 @@ function onListClick(list: List) {
 </script>
 
 <template>
-  <MainHeader title="My lists" backRoute="accounts" />
+  <MainHeader title="My lists" backRoute="users" />
 
   <section>
     <v-card

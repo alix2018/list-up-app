@@ -145,19 +145,14 @@ onUnmounted(() => {
         append-inner-icon="mdi-send"
         @click:append-inner="verifyTranslation"
       />
-      <v-btn variant="text" elevation="0" class="btn-pass" @click="onPassClick">Pass 🙅‍♀️</v-btn>
+      <v-btn-text class="btn-pass" @click="onPassClick">Pass 🙅‍♀️</v-btn-text>
     </form>
     <template v-else>
       <template v-if="!isPassed">
         <div class="user-answer">
           <p class="user-answer-label">Your answer:</p>
-          <v-btn
-            variant="text"
-            elevation="0"
-            class="btn-correct"
-            append-icon="mdi-check"
-            @click="markAsCorrect"
-            >I was right</v-btn
+          <v-btn-text class="btn-correct" append-icon="mdi-check" @click="markAsCorrect"
+            >I was right</v-btn-text
           >
         </div>
 
