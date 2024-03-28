@@ -10,6 +10,8 @@ const app = createApp(App);
 
 // Vuetify
 import 'vuetify/styles';
+import './assets/base.css';
+
 import { createVuetify } from 'vuetify';
 import * as components from 'vuetify/components';
 import * as directives from 'vuetify/directives';
@@ -29,8 +31,9 @@ const vuetify = createVuetify({
   defaults: {
     VBtn: {
       rounded: 'sm',
-      elevation: 4,
-      color: '#5763b7'
+      elevation: 2,
+      color: 'var(--color-dark-purple)',
+      style: 'color: white;'
     }
   }
 });

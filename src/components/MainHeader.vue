@@ -38,7 +38,6 @@ function onBackButtonClick() {
     <v-progress-linear
       v-if="progress != null && progress >= 0"
       class="progress"
-      color="#5763b7"
       :model-value="progress"
     ></v-progress-linear>
   </header>
@@ -82,5 +81,6 @@ p {
   position: absolute;
   top: auto !important;
   bottom: 0;
+  color: var(--color-dark-purple);
 }
 </style>

@@ -36,7 +36,7 @@ function onListClick(list: List) {
       :key="list?.name"
       @click="onListClick(list)"
       class="card"
-      elevation="4"
+      elevation="2"
       max-width="344"
     >
       <v-card-item class="card-item">
