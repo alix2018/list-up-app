@@ -16,7 +16,6 @@ function onUserClick(user: User) {
 }
 
 onMounted(() => {
-  // TODO: Upload new test lists
   fetch('./data.json')
     .then((response) => response.json())
     .then((json) => {

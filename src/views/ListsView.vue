@@ -34,6 +34,7 @@ function onAddListClick() {
 <template>
   <MainHeader title="My lists" backRoute="users" />
 
+  <!-- TODO: Add lists folders -->
   <section>
     <v-card
       v-for="list in currentUserData?.lists"
