@@ -40,38 +40,29 @@ function onLearnClick() {
 <template>
   <MainHeader :title="userStore?.currentUserList?.name" :subtitle="subtitle" backRoute="lists" />
 
-  <section>
-    <!-- <v-btn @click="onWordsSwitch">Switch</v-btn> -->
-    <!-- TODO: Make the header sticky -->
-    <v-table class="table" density="comfortable" sortable>
-      <thead>
-        <tr>
-          <th class="th">Source</th>
-          <th class="th">Translation</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr v-for="word in userStore?.currentUserList?.words" :key="word.source">
-          <td>{{ word.source }}</td>
-          <td>{{ word.translation }}</td>
-        </tr>
-      </tbody>
-    </v-table>
-  </section>
+  <!-- <v-btn @click="onWordsSwitch">Switch</v-btn> -->
+  <v-table class="table" density="comfortable" fixed-header>
+    <thead class="thead">
+      <tr>
+        <th class="th">Source</th>
+        <th class="th">Translation</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr v-for="word in userStore?.currentUserList?.words" :key="word.source">
+        <td>{{ word.source }}</td>
+        <td>{{ word.translation }}</td>
+      </tr>
+    </tbody>
+  </v-table>
   <v-btn class="btn-learn" @click="onLearnClick">Learn</v-btn>
 </template>
 
 <style scoped>
-section {
+.table {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   flex: 1;
   overflow-y: auto;
-}
-
-.table {
-  width: 100%;
 }
 
 .th {
