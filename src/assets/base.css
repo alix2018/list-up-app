@@ -13,3 +13,27 @@
   --app-side-padding: 28px;
   --app-bottom-padding: 20px;
 }
+
+@media (min-width: 600px) {
+  :root {
+    --app-side-padding: 100px;
+  }
+}
+
+@media (min-width: 768px) {
+  :root {
+    --app-side-padding: 200px;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --app-side-padding: 400px;
+  }
+}
+
+@media (min-width: 1600px) {
+  :root {
+    --app-side-padding: 600px;
+  }
+}
