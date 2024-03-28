@@ -25,6 +25,10 @@ function onListClick(list: List) {
   userStore.setUserList(list);
   router.push({ name: 'list' });
 }
+
+function onAddListClick() {
+  // TODO
+}
 </script>
 
 <template>
@@ -47,6 +51,7 @@ function onListClick(list: List) {
       </v-card-item>
     </v-card>
   </section>
+  <v-btn size="x-large" icon="mdi-plus" disabled class="btn-add" @click="onAddListClick"></v-btn>
 </template>
 
 <style scoped>
@@ -65,5 +70,12 @@ section {
   width: 100%;
   margin-top: 20px;
   cursor: pointer;
+}
+
+.btn-add {
+  position: absolute;
+  bottom: var(--app-bottom-padding);
+  right: var(--app-side-padding);
+  border-radius: 100% !important;
 }
 </style>
