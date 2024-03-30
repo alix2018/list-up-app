@@ -7,6 +7,8 @@ import { concatAndShuffleArrays, shuffleArray } from '@/utils';
 import type { Word } from '@/types';
 import MainHeader from '@/components/MainHeader.vue';
 
+// TODO: Write composable to factorize the code of Leaning and Flashcards components
+// https://vuejs.org/guide/reusability/composables.html#composables
 const userStore = useUserStore();
 const learningStore = useLearningStore();
 const router = useRouter();
@@ -127,6 +129,7 @@ onUnmounted(() => {
     :progress="currentProgress"
   />
 
+  <!-- TODO: Flipping card effect -->
   <v-card v-if="!isCorrection" class="card" @click="onFlipCard">
     <v-card-title class="card-title">
       {{ learningStore.subsetList?.[subsetIndex]?.source }}</v-card-title
