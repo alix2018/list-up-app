@@ -13,6 +13,7 @@ const router = useRouter();
 
 const subsetIndex: Ref<number> = ref(0);
 const isCorrection: Ref<boolean> = ref(false);
+const noTransition: Ref<boolean> = ref(false);
 const wordsPerRound: Ref<number> = ref(7);
 
 const subtitle: Ref<string> = computed(() => {
@@ -24,19 +25,29 @@ const currentProgress: Ref<number> = computed(
 );
 
 function onLearnAgainClick(event: Event) {
+  noTransition.value = true;
   event.stopPropagation();
   const currentWord = learningStore.subsetList?.[subsetIndex.value];
   learningStore.incorrectList.push(currentWord);
   isCorrection.value = false;
   goToNext();
+  enableTransition();
 }
 
 function onCorrectClick(event: Event) {
+  noTransition.value = true;
   event.stopPropagation();
   const currentWord = learningStore.subsetList?.[subsetIndex.value];
   learningStore.learnedList.push(currentWord);
   isCorrection.value = false;
   goToNext();
+  enableTransition();
+}
+
+function enableTransition() {
+  setTimeout(() => {
+    noTransition.value = false;
+  }, 1);
 }
 
 function onFlipCard() {
@@ -109,32 +120,68 @@ onUnmounted(() => {
     :progress="currentProgress"
   />
 
-  <!-- TODO: Flipping card effect -->
-  <v-card v-if="!isCorrection" class="card" @click="onFlipCard">
-    <v-card-title class="card-title">
-      {{ learningStore.subsetList?.[subsetIndex]?.source }}</v-card-title
-    >
-  </v-card>
+  <!-- TODO: Improve the transition logic when clicking on wrong/right -->
+  <v-card
+    class="card"
+    :ripple="false"
+    @click="onFlipCard"
+    :class="{ 'flip-card': isCorrection, 'no-transition': noTransition }"
+  >
+    <div class="card-face front">
+      <v-card-title class="card-title">
+        {{ learningStore.subsetList?.[subsetIndex]?.source }}</v-card-title
+      >
+    </div>
 
-  <v-card v-if="isCorrection" class="card" @click="onFlipCard">
-    <v-card-title class="card-title">
-      {{ learningStore.subsetList?.[subsetIndex]?.translation }}</v-card-title
-    >
-    <v-card-actions class="card-actions">
-      <v-btn-text prepend-icon="mdi-close" class="btn-wrong" @click="onLearnAgainClick"
-        >To learn</v-btn-text
+    <div class="card-face back">
+      <v-card-title class="card-title">
+        {{ learningStore.subsetList?.[subsetIndex]?.translation }}</v-card-title
       >
-      <v-btn-text prepend-icon="mdi-check" class="btn-right" @click="onCorrectClick"
-        >Correct</v-btn-text
-      >
-    </v-card-actions>
+      <v-card-actions class="card-actions">
+        <v-btn-text prepend-icon="mdi-close" class="btn-wrong" @click="onLearnAgainClick"
+          >To learn</v-btn-text
+        >
+        <v-btn-text prepend-icon="mdi-check" class="btn-right" @click="onCorrectClick"
+          >Correct</v-btn-text
+        >
+      </v-card-actions>
+    </div>
   </v-card>
 </template>
 
 <style scoped>
-.card {
-  position: relative;
+.container {
   height: 100%;
+  width: 100%;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.5s;
+  /* transition: none; */
+  transform-style: preserve-3d;
+  overflow: unset !important;
+}
+
+.card.flip-card {
+  transform: rotateY(180deg);
+}
+
+.card.no-transition {
+  transition: none;
+}
+
+.card-face {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  backface-visibility: hidden;
+}
+
+.back {
+  transform: rotateY(180deg);
 }
 
 .card-title {
