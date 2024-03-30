@@ -30,6 +30,12 @@ watch(
 //   fromSourceToTranslation.value = !fromSourceToTranslation.value;
 // }
 
+function onFlashcardsClick() {
+  if (userStore.currentUserList?.words) {
+    router.push({ name: 'flashcards' });
+  }
+}
+
 function onLearnClick() {
   if (userStore.currentUserList?.words) {
     router.push({ name: 'learning' });
@@ -55,7 +61,20 @@ function onLearnClick() {
       </tr>
     </tbody>
   </v-table>
-  <v-btn class="btn-learn" @click="onLearnClick">Learn</v-btn>
+
+  <v-btn class="btn-learn">
+    Learn
+    <v-menu activator="parent">
+      <v-list>
+        <v-list-item>
+          <v-list-item-title @click="onFlashcardsClick">Flashcards</v-list-item-title>
+        </v-list-item>
+        <v-list-item>
+          <v-list-item-title @click="onLearnClick">Learn by typing</v-list-item-title>
+        </v-list-item>
+      </v-list>
+    </v-menu>
+  </v-btn>
 </template>
 
 <style scoped>
