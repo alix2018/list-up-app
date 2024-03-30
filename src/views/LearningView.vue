@@ -1,13 +1,10 @@
 <script setup lang="ts">
-import { watch, onUnmounted, onMounted, computed, ref, type Ref } from 'vue';
+import { onUnmounted, onMounted, computed, ref, type Ref } from 'vue';
 import { useRouter } from 'vue-router';
-import { useUserStore, useLearningStore } from '@/stores';
-import { LOCAL_STORAGE_CURRENT_LEARNING_LIST } from '@/constants';
+import { useLearningStore } from '@/stores';
 import { concatAndShuffleArrays, shuffleArray } from '@/utils';
-import type { Word } from '@/types';
 import MainHeader from '@/components/MainHeader.vue';
 
-const userStore = useUserStore();
 const learningStore = useLearningStore();
 const router = useRouter();
 
@@ -23,24 +20,6 @@ const subtitle: Ref<string> = computed(() => {
 
 const currentProgress: Ref<number> = computed(
   () => (learningStore.learnedList.length / learningStore.currentList.length) * 100
-);
-
-const listToLearn: Ref<Word[]> = computed(() => {
-  let currentList: Word[] = [];
-
-  if (userStore.currentUserList?.words?.length && userStore.currentUserList.words.length > 0) {
-    currentList = userStore.currentUserList.words;
-  } else {
-    currentList = JSON.parse(localStorage.getItem(LOCAL_STORAGE_CURRENT_LEARNING_LIST) ?? '');
-  }
-
-  return currentList;
-});
-
-watch(
-  () => listToLearn,
-  (newValue) => learningStore.setCurrentList(newValue.value),
-  { deep: true, immediate: true }
 );
 
 function onPassClick() {
