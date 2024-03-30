@@ -12,9 +12,7 @@ const learningStore = useLearningStore();
 const router = useRouter();
 
 const subsetIndex: Ref<number> = ref(0);
-const answer: Ref<string> = ref('');
 const isCorrection: Ref<boolean> = ref(false);
-const isPassed: Ref<boolean> = ref(false);
 const wordsPerRound: Ref<number> = ref(7);
 
 const subtitle: Ref<string> = computed(() => {
@@ -43,22 +41,24 @@ watch(
   { deep: true, immediate: true }
 );
 
-function onLearnAgainClick() {
+function onLearnAgainClick(event: Event) {
+  event.stopPropagation();
   const currentWord = learningStore.subsetList?.[subsetIndex.value];
   learningStore.incorrectList.push(currentWord);
   isCorrection.value = false;
   goToNext();
 }
 
-function onCorrectClick() {
+function onCorrectClick(event: Event) {
+  event.stopPropagation();
   const currentWord = learningStore.subsetList?.[subsetIndex.value];
   learningStore.learnedList.push(currentWord);
   isCorrection.value = false;
   goToNext();
 }
 
-function onShowTranslationClick() {
-  isCorrection.value = true;
+function onFlipCard() {
+  isCorrection.value = !isCorrection.value;
 }
 
 function goToNext() {
@@ -127,68 +127,25 @@ onUnmounted(() => {
     :progress="currentProgress"
   />
 
-  <v-card v-if="!isCorrection" class="card" @click="onShowTranslationClick">
+  <v-card v-if="!isCorrection" class="card" @click="onFlipCard">
     <v-card-title class="card-title">
       {{ learningStore.subsetList?.[subsetIndex]?.source }}</v-card-title
     >
   </v-card>
 
-  <v-card v-if="isCorrection" class="card">
+  <v-card v-if="isCorrection" class="card" @click="onFlipCard">
     <v-card-title class="card-title">
       {{ learningStore.subsetList?.[subsetIndex]?.translation }}</v-card-title
     >
     <v-card-actions class="card-actions">
       <v-btn-text prepend-icon="mdi-close" class="btn-wrong" @click="onLearnAgainClick"
-        >Again</v-btn-text
+        >To learn</v-btn-text
       >
       <v-btn-text prepend-icon="mdi-check" class="btn-right" @click="onCorrectClick"
         >Correct</v-btn-text
       >
     </v-card-actions>
   </v-card>
-
-  <!-- <p class="current-word">{{ learningStore.subsetList?.[subsetIndex]?.source }}</p>
-    <form v-if="!isCorrection" @submit.prevent="verifyTranslation">
-      <v-text-field
-        class="input"
-        label="Answer"
-        variant="underlined"
-        v-model="answer"
-        append-inner-icon="mdi-send"
-        @click:append-inner="verifyTranslation"
-      />
-      <v-btn-text class="btn-pass" @click="onPassClick">Pass 🙅‍♀️</v-btn-text>
-    </form>
-    <template v-else>
-      <template v-if="!isPassed">
-        <div class="user-answer">
-          <p class="user-answer-label">Your answer:</p>
-          <v-btn-text class="btn-correct" append-icon="mdi-check" @click="markAsCorrect"
-            >I was right</v-btn-text
-          >
-        </div>
-
-        <v-text-field
-          class="incorrect-answer"
-          variant="outlined"
-          v-model="answer"
-          prepend-inner-icon="mdi-close"
-          readonly
-        />
-      </template>
-
-      <p class="correct-answer-label">Correct answer:</p>
-      <v-text-field
-        class="correct-answer"
-        variant="outlined"
-        :value="learningStore.subsetList?.[subsetIndex]?.translation"
-        prepend-inner-icon="mdi-check"
-        readonly
-      />
-
-      <v-btn class="btn-next" @click="goToNext">Next</v-btn>
-    </template> -->
-  <!-- </section> -->
 </template>
 
 <style scoped>
