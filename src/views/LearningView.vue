@@ -1,59 +1,36 @@
 <script setup lang="ts">
-import { onUnmounted, onMounted, computed, ref, type Ref } from 'vue';
-import { useRouter } from 'vue-router';
+import { ref, type Ref } from 'vue';
+import { useLearningLogic } from '@/composables';
 import { useLearningStore } from '@/stores';
-import { concatAndShuffleArrays, shuffleArray } from '@/utils';
 import MainHeader from '@/components/MainHeader.vue';
 
 const learningStore = useLearningStore();
-const router = useRouter();
+const learningLogic = useLearningLogic();
 
-const subsetIndex: Ref<number> = ref(0);
 const answer: Ref<string> = ref('');
-const isCorrection: Ref<boolean> = ref(false);
 const isPassed: Ref<boolean> = ref(false);
-const wordsPerRound: Ref<number> = ref(7);
-
-const subtitle: Ref<string> = computed(() => {
-  return `${learningStore.learnedList.length}/${learningStore.currentList.length}`;
-});
-
-const currentProgress: Ref<number> = computed(
-  () => (learningStore.learnedList.length / learningStore.currentList.length) * 100
-);
 
 function onPassClick() {
   isPassed.value = true;
-  isCorrection.value = true;
-  const currentWord = learningStore.subsetList?.[subsetIndex.value];
+  learningLogic.isCorrection = true;
+  const currentWord = learningStore.subsetList?.[learningLogic.subsetIndex];
   learningStore.incorrectList.push(currentWord);
 }
 
 function markAsCorrect() {
-  learningStore.learnedList.push(learningStore.subsetList?.[subsetIndex.value]);
+  learningStore.learnedList.push(learningStore.subsetList?.[learningLogic.subsetIndex]);
   learningStore.incorrectList.pop();
   goToNext();
 }
 
 function goToNext() {
   resetForm();
-  if (subsetIndex.value < learningStore.subsetList?.length - 1) {
-    subsetIndex.value++;
-  } else if (
-    subsetIndex.value === learningStore.subsetList?.length - 1 &&
-    (learningStore.subsetLeftoverList.length > 0 || learningStore.incorrectList.length > 0)
-  ) {
-    subsetIndex.value = 0;
-    createNextSubsetLists();
-  } else {
-    // TODO: Add end page
-    router.push({ name: 'list' });
-  }
+  learningLogic.goToNext();
 }
 
 function verifyTranslation() {
   const userAnswer = answer.value.toLowerCase();
-  const currentWord = learningStore.subsetList?.[subsetIndex.value];
+  const currentWord = learningStore.subsetList?.[learningLogic.subsetIndex];
   const correctAnswer = currentWord.translation.toLowerCase();
 
   if (userAnswer === correctAnswer) {
@@ -61,61 +38,28 @@ function verifyTranslation() {
     goToNext();
   } else {
     learningStore.incorrectList.push(currentWord);
-    isCorrection.value = true;
+    learningLogic.isCorrection = true;
   }
 }
 
 function resetForm() {
-  isCorrection.value = false;
+  learningLogic.resetForm();
   isPassed.value = false;
   answer.value = '';
 }
-
-function resetLists() {
-  subsetIndex.value = 0;
-  learningStore.subsetList = [];
-  learningStore.incorrectList = [];
-  learningStore.learnedList = [];
-  learningStore.subsetLeftoverList = [];
-}
-
-function initSubsetLists() {
-  const shuffledList = shuffleArray(learningStore.currentList);
-  const subsetToLearn = shuffledList.slice(0, wordsPerRound.value);
-  const subsetLeftToLearn = shuffledList.slice(wordsPerRound.value, shuffledList.length);
-  learningStore.subsetList = subsetToLearn;
-  learningStore.subsetLeftoverList = subsetLeftToLearn;
-}
-
-function createNextSubsetLists() {
-  const shuffledList = shuffleArray(learningStore.subsetLeftoverList);
-  const missingWordsCount = wordsPerRound.value - learningStore.incorrectList.length;
-  const subsetToLearn = concatAndShuffleArrays(
-    learningStore.incorrectList,
-    shuffledList.slice(0, missingWordsCount)
-  );
-  const subsetLeftoverList = shuffledList.slice(missingWordsCount, shuffledList.length);
-  learningStore.subsetList = subsetToLearn;
-  learningStore.subsetLeftoverList = subsetLeftoverList;
-  learningStore.incorrectList = [];
-}
-
-onMounted(() => {
-  initSubsetLists();
-});
-
-onUnmounted(() => {
-  resetForm();
-  resetLists();
-});
 </script>
 
 <template>
-  <MainHeader title="Learn" :subtitle="subtitle" backRoute="list" :progress="currentProgress" />
+  <MainHeader
+    title="Learn"
+    :subtitle="learningLogic.subtitle"
+    backRoute="list"
+    :progress="learningLogic.currentProgress"
+  />
 
   <section>
-    <p class="current-word">{{ learningStore.subsetList?.[subsetIndex]?.source }}</p>
-    <form v-if="!isCorrection" @submit.prevent="verifyTranslation">
+    <p class="current-word">{{ learningStore.subsetList?.[learningLogic.subsetIndex]?.source }}</p>
+    <form v-if="!learningLogic.isCorrection" @submit.prevent="verifyTranslation">
       <v-text-field
         class="input"
         label="Answer"
@@ -148,7 +92,7 @@ onUnmounted(() => {
       <v-text-field
         class="correct-answer"
         variant="outlined"
-        :value="learningStore.subsetList?.[subsetIndex]?.translation"
+        :value="learningStore.subsetList?.[learningLogic.subsetIndex]?.translation"
         prepend-inner-icon="mdi-check"
         readonly
       />

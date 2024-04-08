@@ -27,7 +27,7 @@ function onListClick(list: List) {
 }
 
 function onAddListClick() {
-  // TODO
+  // TODO when connecting to BE
 }
 </script>
 

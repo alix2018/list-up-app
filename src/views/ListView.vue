@@ -8,7 +8,7 @@ import type { List } from '@/types';
 
 const userStore = useUserStore();
 const router = useRouter();
-const fromSourceToTranslation: Ref<Boolean> = ref(true);
+// const fromSourceToTranslation: Ref<Boolean> = ref(true);
 
 const subtitle: Ref<string> = computed(() => {
   return `(${userStore?.currentUserList?.words.length} words)`;
@@ -36,7 +36,7 @@ function onFlashcardsClick() {
   }
 }
 
-function onLearnClick() {
+function onTypingClick() {
   if (userStore.currentUserList?.words) {
     router.push({ name: 'learning' });
   }
@@ -70,7 +70,7 @@ function onLearnClick() {
           <v-list-item-title @click="onFlashcardsClick">Flashcards</v-list-item-title>
         </v-list-item>
         <v-list-item>
-          <v-list-item-title @click="onLearnClick">Learn by typing</v-list-item-title>
+          <v-list-item-title @click="onTypingClick">Typing</v-list-item-title>
         </v-list-item>
       </v-list>
     </v-menu>
