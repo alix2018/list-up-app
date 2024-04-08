@@ -38,7 +38,8 @@ const vuetify = createVuetify({
       rounded: 'sm',
       elevation: 2,
       color: 'var(--color-dark-purple)',
-      style: 'color: white;'
+      style: 'color: white;',
+      size: 'large'
     },
     VBtnText: {
       variant: 'text',

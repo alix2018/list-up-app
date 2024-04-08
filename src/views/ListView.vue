@@ -8,7 +8,7 @@ import type { List } from '@/types';
 
 const userStore = useUserStore();
 const router = useRouter();
-const fromSourceToTranslation: Ref<Boolean> = ref(true);
+// const fromSourceToTranslation: Ref<Boolean> = ref(true);
 
 const subtitle: Ref<string> = computed(() => {
   return `(${userStore?.currentUserList?.words.length} words)`;
@@ -30,9 +30,15 @@ watch(
 //   fromSourceToTranslation.value = !fromSourceToTranslation.value;
 // }
 
-function onLearnClick() {
+function onFlashcardsClick() {
   if (userStore.currentUserList?.words) {
-    router.push({ name: 'learning' });
+    router.push({ name: 'flashcards' });
+  }
+}
+
+function onTypingClick() {
+  if (userStore.currentUserList?.words) {
+    router.push({ name: 'typing' });
   }
 }
 </script>
@@ -55,7 +61,20 @@ function onLearnClick() {
       </tr>
     </tbody>
   </v-table>
-  <v-btn class="btn-learn" @click="onLearnClick">Learn</v-btn>
+
+  <v-btn class="btn-learn">
+    Learn
+    <v-menu activator="parent">
+      <v-list>
+        <v-list-item>
+          <v-list-item-title @click="onFlashcardsClick">Flashcards</v-list-item-title>
+        </v-list-item>
+        <v-list-item>
+          <v-list-item-title @click="onTypingClick">Typing</v-list-item-title>
+        </v-list-item>
+      </v-list>
+    </v-menu>
+  </v-btn>
 </template>
 
 <style scoped>

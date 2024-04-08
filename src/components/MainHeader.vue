@@ -27,7 +27,7 @@ function onBackButtonClick() {
       v-if="backRoute"
       rounded="xl"
       icon="mdi-arrow-left-thick"
-      size="x-small"
+      size="small"
       class="btn-back"
       @click="onBackButtonClick"
     ></v-btn>
