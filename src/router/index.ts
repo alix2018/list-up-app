@@ -2,8 +2,8 @@ import { createRouter, createWebHistory } from 'vue-router';
 import UsersView from '../views/UsersView.vue';
 import ListsView from '../views/ListsView.vue';
 import ListView from '../views/ListView.vue';
-import FlashcardsView from '../views/FlashcardsView.vue';
-import LearningView from '../views/LearningView.vue';
+import LearningFlashcardsView from '../views/LearningFlashcardsView.vue';
+import LearningTypingView from '../views/LearningTypingView.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -26,12 +26,12 @@ const router = createRouter({
     {
       path: '/flashcards',
       name: 'flashcards',
-      component: FlashcardsView
+      component: LearningFlashcardsView
     },
     {
-      path: '/learning',
-      name: 'learning',
-      component: LearningView
+      path: '/typing',
+      name: 'typing',
+      component: LearningTypingView
     }
   ]
 });

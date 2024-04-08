@@ -51,7 +51,7 @@ function resetForm() {
 
 <template>
   <MainHeader
-    title="Learn"
+    title="Typing"
     :subtitle="learningLogic.subtitle"
     backRoute="list"
     :progress="learningLogic.currentProgress"

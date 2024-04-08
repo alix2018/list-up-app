@@ -38,7 +38,7 @@ function onFlashcardsClick() {
 
 function onTypingClick() {
   if (userStore.currentUserList?.words) {
-    router.push({ name: 'learning' });
+    router.push({ name: 'typing' });
   }
 }
 </script>
