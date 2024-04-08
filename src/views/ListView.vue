@@ -66,11 +66,11 @@ function onTypingClick() {
     Learn
     <v-menu activator="parent">
       <v-list>
-        <v-list-item>
-          <v-list-item-title @click="onFlashcardsClick">Flashcards</v-list-item-title>
+        <v-list-item @click="onFlashcardsClick">
+          <v-list-item-title>Flashcards</v-list-item-title>
         </v-list-item>
-        <v-list-item>
-          <v-list-item-title @click="onTypingClick">Typing</v-list-item-title>
+        <v-list-item @click="onTypingClick">
+          <v-list-item-title>Typing</v-list-item-title>
         </v-list-item>
       </v-list>
     </v-menu>
@@ -100,5 +100,9 @@ table {
 
 td {
   padding: 10px 20px;
+}
+
+.list-item {
+  cursor: pointer;
 }
 </style>
