@@ -142,7 +142,7 @@
         ]
       },
       {
-        "name": "Horse riding",
+        "name": "Horse riding 1",
         "words": [
           {
             "source": "Cheval",
@@ -201,12 +201,8 @@
             "translation": "Opstijgen"
           },
           {
-            "source": "Rêne interieure",
-            "translation": "Binnenteugel"
-          },
-          {
-            "source": "Rêne extérieure",
-            "translation": "Buitenteugel"
+            "source": "Rênes",
+            "translation": "Teugels"
           },
           {
             "source": "Raccourcir les rênes / To pick up the reins",
@@ -227,6 +223,331 @@
           {
             "source": "Arrêt",
             "translation": "Halthouden"
+          },
+          {
+            "source": "Cordon",
+            "translation": "Bandje"
+          },
+          {
+            "source": "Seller",
+            "translation": "Zadelen"
+          },
+          {
+            "source": "Licol",
+            "translation": "Halster"
+          },
+          {
+            "source": "Attacher",
+            "translation": "Vastbinden"
+          },
+          {
+            "source": "Glisser",
+            "translation": "Glijden"
+          },
+          {
+            "source": "Boucle",
+            "translation": "Gesp"
+          },
+          {
+            "source": "Filer",
+            "translation": "net"
+          },
+          {
+            "source": "Encolure",
+            "translation": "Halsopening"
+          },
+          {
+            "source": "Mors",
+            "translation": "Het bit"
+          },
+          {
+            "source": "Gorge",
+            "translation": "Hals"
+          },
+          {
+            "source": "Crinière",
+            "translation": "Manen"
+          }
+        ]
+      },
+      {
+        "name": "Horse riding 2",
+        "words": [
+          {
+            "source": "Tendon",
+            "translation": "Pees"
+          },
+          {
+            "source": "Jarret (partie inférieur de la jambe)",
+            "translation": "Hak"
+          },
+          {
+            "source": "Genou",
+            "translation": "Knie"
+          },
+          {
+            "source": "Queue",
+            "translation": "Staart"
+          },
+          {
+            "source": "Couverture",
+            "translation": "Deken"
+          },
+          {
+            "source": "Longe d'attache / Rope",
+            "translation": "Halstertouw"
+          },
+          {
+            "source": "Équipement",
+            "translation": "Harnachement / Uitrusting"
+          },
+          {
+            "source": "Chaîne",
+            "translation": "Ketting"
+          },
+          {
+            "source": "Cloches",
+            "translation": "Springschoenen"
+          },
+          {
+            "source": "Corde / Longe",
+            "translation": "Touw"
+          },
+          {
+            "source": "Cravache",
+            "translation": "Zweep"
+          },
+          {
+            "source": "Bride",
+            "translation": "Hoofdstel"
+          },
+          {
+            "source": "Sous-gorge (partie de la bride sous la gorge)",
+            "translation": "Keelriem"
+          },
+          {
+            "source": "Têtière (partie de la bride derrière les oreilles)",
+            "translation": "Kopstuk"
+          },
+          {
+            "source": "Muserolle (partie de la bride sur le nez)",
+            "translation": "Neusriem"
+          },
+          {
+            "source": "Frontal (partie de la devant les oreilles)",
+            "translation": "Frontriem"
+          },
+          {
+            "source": "Bride complète",
+            "translation": "Stang en trens"
+          },
+          {
+            "source": "Bonnet",
+            "translation": "Oornetje"
+          },
+          {
+            "source": "Étrille (brosse dure)",
+            "translation": "Rosborstel"
+          },
+          {
+            "source": "Bouchon (brosse médium)",
+            "translation": "Hardeborstel"
+          },
+          {
+            "source": "Brosse douce",
+            "translation": "Zachteborstel"
+          },
+          {
+            "source": "Fer à cheval",
+            "translation": "Hoefijzer"
+          },
+          {
+            "source": "Cure-pied",
+            "translation": "Hoevenkrabber"
+          },
+          {
+            "source": "Curer les pieds",
+            "translation": "Hoeven uitkrabben"
+          },
+          {
+            "source": "Peigne",
+            "translation": "Kam"
+          },
+          {
+            "source": "Fumier",
+            "translation": "Mesthoop"
+          },
+          {
+            "source": "Brosser",
+            "translation": "Poetsen"
+          },
+          {
+            "source": "Pansage",
+            "translation": "Poetsbeurt"
+          },
+          {
+            "source": "Shampooing",
+            "translation": "Shampoo"
+          },
+          {
+            "source": "Éponge",
+            "translation": "Spons"
+          },
+          {
+            "source": "Litière",
+            "translation": "Stalbedekking"
+          },
+          {
+            "source": "Le van",
+            "translation": "Trailer"
+          },
+          {
+            "source": "Mouche",
+            "translation": "Vlieg"
+          },
+          {
+            "source": "Pas",
+            "translation": "Stap"
+          },
+          {
+            "source": "Piste",
+            "translation": "Rijbaan"
+          },
+          {
+            "source": "Rester immobile",
+            "translation": "stilstaan"
+          },
+          {
+            "source": "Distance",
+            "translation": "Afstand"
+          },
+          {
+            "source": "Le score",
+            "translation": "Puntentelling"
+          },
+          {
+            "source": "Sabot",
+            "translation": "Hoef"
+          },
+          {
+            "source": "Croupe (le derrière)",
+            "translation": "Kruis"
+          },
+          {
+            "source": "Casque / Toque",
+            "translation": "Cap"
+          },
+          {
+            "source": "Gants",
+            "translation": "Handschoenen"
+          },
+          {
+            "source": "Boots (chaussures basses)",
+            "translation": "Jodhpurs"
+          },
+          {
+            "source": "Bottes (chaussures au dessus du mollet)",
+            "translation": "Laarzen"
+          },
+          {
+            "source": "Sangle",
+            "translation": "Single"
+          },
+          {
+            "source": "Étrier",
+            "translation": "Stijgbeugel"
+          },
+          {
+            "source": "Etrivières",
+            "translation": "Stijgbeugelriemen"
+          },
+          {
+            "source": "Porte-étrivières",
+            "translation": "Stijgbeugelriemhaak"
+          },
+          {
+            "source": "Tapis de selle",
+            "translation": "Zadeldeken"
+          },
+          {
+            "source": "Mettre la selle",
+            "translation": "Opzadelen"
+          },
+          {
+            "source": "Siège (assise de la selle)",
+            "translation": "Zit"
+          },
+          {
+            "source": "Pommeau (avant de la selle)",
+            "translation": "Voorboom"
+          },
+          {
+            "source": "Arrière de la selle",
+            "translation": "Achterboom"
+          },
+          {
+            "source": "Sangler",
+            "translation": "Aansingelen"
+          },
+          {
+            "source": "Resangler",
+            "translation": "Nasingelen"
+          },
+          {
+            "source": "Cuir",
+            "translation": "Leer"
+          },
+          {
+            "source": "Affaires de nettoyage",
+            "translation": "Poetsspullen"
+          },
+          {
+            "source": "Paardenvoer",
+            "translation": "Nourriture pour chevaux"
+          },
+          {
+            "source": "Brouter",
+            "translation": "Grazen"
+          },
+          {
+            "source": "Avoine",
+            "translation": "Haver"
+          },
+          {
+            "source": "Foin",
+            "translation": "Hooi"
+          },
+          {
+            "source": "Granules",
+            "translation": "Granules"
+          },
+          {
+            "source": "Bonbon",
+            "translation": "Snoepjes"
+          },
+          {
+            "source": "Paille",
+            "translation": "Stro"
+          },
+          {
+            "source": "Aliment",
+            "translation": "Voer"
+          },
+          {
+            "source": "Pré",
+            "translation": "Weide"
+          },
+          {
+            "source": "Son (partie des grains)",
+            "translation": "Zemelen"
+          },
+          {
+            "source": "Lucerne (plante)",
+            "translation": "Luzerne"
+          },
+          {
+            "source": "Fourrage (bottes de foin)",
+            "translation": "Ruwvoer"
           }
         ]
       },
