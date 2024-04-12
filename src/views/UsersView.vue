@@ -1,11 +1,9 @@
 <script setup lang="ts">
-import { onMounted, ref, type Ref } from 'vue';
 import { useUserStore } from '@/stores';
 import { useRouter } from 'vue-router';
 import type { User } from '@/types';
 import MainHeader from '@/components/MainHeader.vue';
-
-const jsonData: Ref<User[] | null> = ref(null);
+import jsonData from '@/assets/data.json';
 
 const userStore = useUserStore();
 const router = useRouter();
@@ -14,15 +12,6 @@ function onUserClick(user: User) {
   userStore.setUserData(user);
   router.push({ name: 'lists' });
 }
-
-onMounted(() => {
-  const version = new Date().getTime();
-  fetch(`./data.json?version=${version}`)
-    .then((response) => response.json())
-    .then((json) => {
-      jsonData.value = json;
-    });
-});
 </script>
 
 <template>
