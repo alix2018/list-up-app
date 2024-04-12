@@ -717,8 +717,12 @@
             "translation": "Doei"
           },
           {
-            "source": "Test",
-            "translation": "Test"
+            "source": "Test1",
+            "translation": "Test1"
+          },
+          {
+            "source": "Test2",
+            "translation": "Test2"
           }
         ]
       },
