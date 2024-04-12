@@ -16,7 +16,8 @@ function onUserClick(user: User) {
 }
 
 onMounted(() => {
-  fetch('./src/assets/data.json')
+  const version = new Date().getTime();
+  fetch(`./data.json?version=${version}`)
     .then((response) => response.json())
     .then((json) => {
       jsonData.value = json;
