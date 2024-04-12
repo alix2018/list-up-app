@@ -715,6 +715,10 @@
           {
             "source": "Bye",
             "translation": "Doei"
+          },
+          {
+            "source": "Test",
+            "translation": "Test"
           }
         ]
       },
