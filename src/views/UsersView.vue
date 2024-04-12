@@ -16,7 +16,7 @@ function onUserClick(user: User) {
 }
 
 onMounted(() => {
-  fetch('./data.json')
+  fetch('./src/assets/data.json')
     .then((response) => response.json())
     .then((json) => {
       jsonData.value = json;

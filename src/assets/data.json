@@ -414,15 +414,19 @@
             "translation": "Rijbaan"
           },
           {
+            "source": "Allée cavalière / Track",
+            "translation": "Hoefslag"
+          },
+          {
             "source": "Rester immobile",
-            "translation": "stilstaan"
+            "translation": "Stilstaan"
           },
           {
             "source": "Distance",
             "translation": "Afstand"
           },
           {
-            "source": "Le score",
+            "source": "Score",
             "translation": "Puntentelling"
           },
           {
@@ -519,10 +523,10 @@
           },
           {
             "source": "Granules",
-            "translation": "Granules"
+            "translation": "Krachtvoer"
           },
           {
-            "source": "Bonbon",
+            "source": "Bonbons",
             "translation": "Snoepjes"
           },
           {
