@@ -94,15 +94,7 @@ function onTypingClick() {
   flex: none;
 }
 
-table {
-  margin-top: 10px;
-}
-
 td {
   padding: 10px 20px;
-}
-
-.list-item {
-  cursor: pointer;
 }
 </style>
