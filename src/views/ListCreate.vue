@@ -114,7 +114,6 @@ function onClickCreateList() {
       </tbody>
     </v-table>
 
-    <!-- TODO: Compute valid property -->
     <v-btn class="btn-create" @click="onClickCreateList" :disabled="!valid || !hasAtLeastOneEntry">
       Create
     </v-btn>
