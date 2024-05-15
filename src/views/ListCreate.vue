@@ -3,12 +3,11 @@ import { computed, type Ref, ref } from 'vue';
 import MainHeader from '@/components/MainHeader.vue';
 import { useRouter } from 'vue-router';
 import type { Word } from '@/types';
-import type { UUID } from 'crypto';
 
 const router = useRouter();
 
 // TODO: temporary until the original Word type is fixed
-type wordsArrayType = Array<Word & { id: UUID }>;
+type wordsArrayType = Array<Word & { id: string }>;
 const listTitle: Ref<string> = ref('');
 const valid: Ref<boolean | null | undefined> = ref(null);
 const rules: Ref<{
@@ -19,7 +18,7 @@ const rules: Ref<{
   };
 });
 const inputsArray: Ref<wordsArrayType> = ref([
-  { id: crypto.randomUUID(), source: '', translation: '' }
+  { id: self.crypto.randomUUID(), source: '', translation: '' }
 ]);
 
 const hasAtLeastOneEntry = computed(() => {
