@@ -27,7 +27,7 @@ function onListClick(list: List) {
 }
 
 function onAddListClick() {
-  // TODO when connecting to BE
+  router.push({ name: 'create-list' });
 }
 </script>
 
@@ -53,7 +53,7 @@ function onAddListClick() {
       </v-card-item>
     </v-card>
   </section>
-  <v-btn size="x-large" icon="mdi-plus" disabled class="btn-add" @click="onAddListClick"></v-btn>
+  <v-btn size="x-large" icon="mdi-plus" class="btn-add" @click="onAddListClick"></v-btn>
 </template>
 
 <style scoped>
