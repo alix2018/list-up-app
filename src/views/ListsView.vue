@@ -29,6 +29,10 @@ function onListClick(list: List) {
 function onAddListClick() {
   router.push({ name: 'create-list' });
 }
+
+function onImportListClick() {
+  router.push({ name: 'import-list' });
+}
 </script>
 
 <template>
@@ -53,7 +57,17 @@ function onAddListClick() {
       </v-card-item>
     </v-card>
   </section>
-  <v-btn size="x-large" icon="mdi-plus" class="btn-add" @click="onAddListClick"></v-btn>
+  <v-btn size="x-large" icon="mdi-plus" class="btn-add" id="menu-activator"> </v-btn>
+  <v-menu activator="#menu-activator">
+    <v-list>
+      <v-list-item @click="onAddListClick">
+        <v-list-item-title>Create list</v-list-item-title>
+      </v-list-item>
+      <v-list-item @click="onImportListClick">
+        <v-list-item-title>Import list</v-list-item-title>
+      </v-list-item>
+    </v-list>
+  </v-menu>
 </template>
 
 <style scoped>
