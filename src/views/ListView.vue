@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, watch, type Ref, ref } from 'vue';
+import { computed, watch, type Ref } from 'vue';
 import MainHeader from '@/components/MainHeader.vue';
 import { useUserStore } from '@/stores';
 import { useRouter } from 'vue-router';

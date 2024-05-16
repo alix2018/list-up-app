@@ -18,7 +18,7 @@ const rules: Ref<{
   };
 });
 const inputsArray: Ref<wordsArrayType> = ref([
-  { id: crypto.randomUUID(), source: '', translation: '' }
+  { id: self.crypto.randomUUID(), source: '', translation: '' }
 ]);
 
 const hasAtLeastOneEntry = computed(() => {
@@ -45,7 +45,7 @@ function onClickRemoveRow(index: number) {
 
 // TODO: Be able to at x rows in once
 function onClickAddRow() {
-  inputsArray.value.push({ id: crypto.randomUUID(), source: '', translation: '' });
+  inputsArray.value.push({ id: self.crypto.randomUUID(), source: '', translation: '' });
 }
 
 function formatArray(inputsArray: wordsArrayType) {

@@ -56,7 +56,7 @@ function parseTextareaContent(text: string) {
     }
     const [source, ...translations] = trimmedLine.split(',');
     const translation = translations.join(',').trim();
-    resArray.push({ id: crypto.randomUUID(), source: source.trim(), translation });
+    resArray.push({ id: self.crypto.randomUUID(), source: source.trim(), translation });
   }
 
   return resArray;
