@@ -129,16 +129,6 @@ function onClickCreateList() {
   margin-bottom: 20px;
 }
 
-.table {
-  display: flex;
-  flex: 1;
-  overflow-y: auto;
-}
-
-.th {
-  font-weight: bold !important;
-}
-
 .last-th {
   width: 20px !important;
 }
@@ -158,9 +148,5 @@ function onClickCreateList() {
   margin-top: 20px;
   width: 100%;
   flex: none;
-}
-
-td {
-  padding: 10px 20px;
 }
 </style>

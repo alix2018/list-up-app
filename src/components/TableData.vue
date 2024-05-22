@@ -2,10 +2,12 @@
 import type { Word } from '@/types';
 
 type Props = {
-  data: Word[];
+  data?: Word[];
 };
 
-const props = defineProps<Props>();
+const props = withDefaults(defineProps<Props>(), {
+  data: () => []
+});
 </script>
 
 <template>
@@ -25,7 +27,7 @@ const props = defineProps<Props>();
   </v-table>
 </template>
 
-<style scoped>
+<style>
 .table {
   display: flex;
   flex: 1;

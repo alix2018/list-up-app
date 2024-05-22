@@ -105,21 +105,6 @@ function onClickCreateList() {
   <template v-else>
     <TableData :data="parsedArray" />
 
-    <!-- <v-table class="table" density="comfortable" fixed-header>
-      <thead class="thead">
-        <tr>
-          <th class="th">Source</th>
-          <th class="th">Translation</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr v-for="word in parsedArray" :key="word.source">
-          <td>{{ word.source }}</td>
-          <td>{{ word.translation }}</td>
-        </tr>
-      </tbody>
-    </v-table> -->
-
     <section class="btn-container">
       <v-btn class="btn-cancel" @click="onClickCancel" :disabled="!valid"> Cancel </v-btn>
       <v-btn class="btn-create" @click="onClickCreateList" :disabled="!valid"> Create </v-btn>
