@@ -6,8 +6,6 @@ import type { Word } from '@/types';
 
 const router = useRouter();
 
-// TODO: temporary until the original Word type is fixed
-type wordsArrayType = Array<Word & { id: string }>;
 const listTitle: Ref<string> = ref('');
 const valid: Ref<boolean | null | undefined> = ref(null);
 const rules: Ref<{
@@ -17,7 +15,7 @@ const rules: Ref<{
     titleRequired: !!listTitle.value || 'Field is required'
   };
 });
-const inputsArray: Ref<wordsArrayType> = ref([
+const inputsArray: Ref<Word[]> = ref([
   { id: self.crypto.randomUUID(), source: '', translation: '' }
 ]);
 
@@ -43,12 +41,12 @@ function onClickRemoveRow(index: number) {
   inputsArray.value.splice(index, 1);
 }
 
-// TODO: Be able to at x rows in once
+// TODO: Be able to add x rows in once
 function onClickAddRow() {
-  inputsArray.value.push({ id: crypto.randomUUID(), source: '', translation: '' });
+  inputsArray.value.push({ id: self.crypto.randomUUID(), source: '', translation: '' });
 }
 
-function formatArray(inputsArray: wordsArrayType) {
+function formatArray(inputsArray: Word[]) {
   const resArray = [];
   for (const input of inputsArray) {
     if (input.source !== '' && input.translation !== '') {
@@ -131,16 +129,6 @@ function onClickCreateList() {
   margin-bottom: 20px;
 }
 
-.table {
-  display: flex;
-  flex: 1;
-  overflow-y: auto;
-}
-
-.th {
-  font-weight: bold !important;
-}
-
 .last-th {
   width: 20px !important;
 }
@@ -160,9 +148,5 @@ function onClickCreateList() {
   margin-top: 20px;
   width: 100%;
   flex: none;
-}
-
-td {
-  padding: 10px 20px;
 }
 </style>

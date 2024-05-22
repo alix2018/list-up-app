@@ -1,11 +1,9 @@
 <script setup lang="ts">
-import { onMounted, ref, type Ref } from 'vue';
 import { useUserStore } from '@/stores';
 import { useRouter } from 'vue-router';
 import type { User } from '@/types';
 import MainHeader from '@/components/MainHeader.vue';
-
-const jsonData: Ref<User[] | null> = ref(null);
+import jsonData from '@/assets/data.json';
 
 const userStore = useUserStore();
 const router = useRouter();
@@ -14,21 +12,18 @@ function onUserClick(user: User) {
   userStore.setUserData(user);
   router.push({ name: 'lists' });
 }
-
-onMounted(() => {
-  fetch('./src/assets/data.json')
-    .then((response) => response.json())
-    .then((json) => {
-      jsonData.value = json;
-    });
-});
 </script>
 
 <template>
   <MainHeader title="List up!" />
 
   <section>
-    <v-btn v-for="user in jsonData" :key="user?.name" class="button" @click="onUserClick(user)">
+    <v-btn
+      v-for="user in jsonData"
+      :key="user?.name"
+      class="button"
+      @click="onUserClick(user as unknown as User)"
+    >
       {{ user?.name }}
     </v-btn>
   </section>

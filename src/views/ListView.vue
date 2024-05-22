@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import { computed, watch, type Ref, ref } from 'vue';
+import { computed, watch, type Ref } from 'vue';
 import MainHeader from '@/components/MainHeader.vue';
+import TableData from '@/components/TableData.vue';
 import { useUserStore } from '@/stores';
 import { useRouter } from 'vue-router';
 import { LOCAL_STORAGE_CURRENT_USER_LIST } from '@/constants';
@@ -47,20 +48,7 @@ function onTypingClick() {
   <MainHeader :title="userStore?.currentUserList?.name" :subtitle="subtitle" backRoute="lists" />
 
   <!-- <v-btn @click="onWordsSwitch">Switch</v-btn> -->
-  <v-table class="table" density="comfortable" fixed-header>
-    <thead class="thead">
-      <tr>
-        <th class="th">Source</th>
-        <th class="th">Translation</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr v-for="word in userStore?.currentUserList?.words" :key="word.source">
-        <td>{{ word.source }}</td>
-        <td>{{ word.translation }}</td>
-      </tr>
-    </tbody>
-  </v-table>
+  <TableData :data="userStore?.currentUserList?.words" />
 
   <v-btn class="btn-learn">
     Learn
@@ -78,23 +66,9 @@ function onTypingClick() {
 </template>
 
 <style scoped>
-.table {
-  display: flex;
-  flex: 1;
-  overflow-y: auto;
-}
-
-.th {
-  font-weight: bold !important;
-}
-
 .btn-learn {
   margin-top: 20px;
   width: 100%;
   flex: none;
-}
-
-td {
-  padding: 10px 20px;
 }
 </style>

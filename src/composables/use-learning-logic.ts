@@ -32,7 +32,6 @@ export function useLearningLogic() {
       state.subsetIndex = 0;
       createNextSubsetLists();
     } else {
-      // TODO: Add end page
       router.push({ name: 'list' });
     }
   }
