@@ -18,7 +18,12 @@ function onUserClick(user: User) {
   <MainHeader title="List up!" />
 
   <section>
-    <v-btn v-for="user in jsonData" :key="user?.name" class="button" @click="onUserClick(user)">
+    <v-btn
+      v-for="user in jsonData"
+      :key="user?.name"
+      class="button"
+      @click="onUserClick(user as unknown as User)"
+    >
       {{ user?.name }}
     </v-btn>
   </section>

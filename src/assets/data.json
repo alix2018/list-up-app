@@ -6,66 +6,82 @@
         "name": "Les temps primitifs",
         "words": [
           {
+            "id": 1,
             "source": "mordre",
             "translation": "bijten / beet - beten / gebeten"
           },
           {
+            "id": 2,
             "source": "apparaître, s'avérer",
             "translation": "blijken / bleek - bleken / is gebleken"
           },
           {
+            "id": 3,
             "source": "rester",
             "translation": "blijven / bleef - bleven / is gebleven"
           },
           {
+            "id": 4,
             "source": "glisser",
             "translation": "glijden / gleed - gleden / gegleden"
           },
           {
+            "id": 5,
             "source": "saisir",
             "translation": "grijpen / greep - grepen / gegrepen"
           },
           {
+            "id": 6,
             "source": "regarder",
             "translation": "kijken / keek - keken / gekeken"
           },
           {
+            "id": 7,
             "source": "pincer",
             "translation": "knijpen / kneep - knepen / geknepen"
           },
           {
+            "id": 8,
             "source": "recevoir",
             "translation": "krijgen / kreeg - kregen / gekregen"
           },
           {
+            "id": 9,
             "source": "souffrir",
             "translation": "lijden / leed - leden / geleden"
           },
           {
+            "id": 10,
             "source": "paraître",
             "translation": "lijken / leek - leken / geleken"
           },
           {
+            "id": 11,
             "source": "louer, vanter",
             "translation": "prijzen / prees - prezen / geprezen"
           },
           {
+            "id": 12,
             "source": "rouler, aller (véhicule)",
             "translation": "rijden / reed - reden / gereden"
           },
           {
+            "id": 13,
             "source": "s'élever",
             "translation": "rijzen / rees - rezen / is gerezen"
           },
           {
+            "id": 14,
             "source": "sembler",
             "translation": "schijnen / scheen - schenen / geschenen"
           },
           {
+            "id": 15,
             "source": "marcher",
             "translation": "schrijden / schreed - schreden / is - heeft geschreden"
           },
           {
+            "id": 16,
             "source": "écrire",
             "translation": "schrijven / schreef - schreven / geschreven"
           }
@@ -80,62 +96,77 @@
         "name": "House",
         "words": [
           {
+            "id": 10,
             "source": "Table",
             "translation": "Tafel"
           },
           {
+            "id": 10,
             "source": "Chair",
             "translation": "Stoel"
           },
           {
+            "id": 10,
             "source": "Couch",
             "translation": "Bank"
           },
           {
+            "id": 10,
             "source": "Television",
             "translation": "Televisie"
           },
           {
+            "id": 10,
             "source": "Knife",
             "translation": "Mes"
           },
           {
+            "id": 10,
             "source": "Spoon",
             "translation": "Lepel"
           },
           {
+            "id": 10,
             "source": "Fork",
             "translation": "Vork"
           },
           {
+            "id": 10,
             "source": "Music",
             "translation": "Muziek"
           },
           {
+            "id": 10,
             "source": "Phone",
             "translation": "Telefoon"
           },
           {
+            "id": 10,
             "source": "Screen",
             "translation": "Scherm"
           },
           {
+            "id": 10,
             "source": "Living room",
             "translation": "Woonkamer"
           },
           {
+            "id": 10,
             "source": "Kitchen",
             "translation": "Keuken"
           },
           {
+            "id": 10,
             "source": "Cupboard",
             "translation": "Kast"
           },
           {
+            "id": 10,
             "source": "Fridge",
             "translation": "Koelkast"
           },
           {
+            "id": 10,
             "source": "Shelf",
             "translation": "Plank"
           }
@@ -145,126 +176,157 @@
         "name": "Horse riding 1",
         "words": [
           {
+            "id": 20,
             "source": "Cheval",
             "translation": "Paard"
           },
           {
+            "id": 20,
             "source": "Cavalier",
             "translation": "Ruiter"
           },
           {
+            "id": 20,
             "source": "Dressage",
             "translation": "Dressuur"
           },
           {
+            "id": 20,
             "source": "Galop",
             "translation": "Galop"
           },
           {
+            "id": 20,
             "source": "Ecurie",
             "translation": "Stal"
           },
           {
+            "id": 20,
             "source": "Centre d'equestre",
             "translation": "Manege"
           },
           {
+            "id": 20,
             "source": "Trot",
             "translation": "Draf"
           },
           {
+            "id": 20,
             "source": "La selle",
             "translation": "Het zadel"
           },
           {
+            "id": 20,
             "source": "Allure",
             "translation": "Gang"
           },
           {
+            "id": 20,
             "source": "Equilibre",
             "translation": "Evenwicht"
           },
           {
+            "id": 20,
             "source": "Position",
             "translation": "Houding"
           },
           {
+            "id": 20,
             "source": "Reculer",
             "translation": "Achterwaarts gaan"
           },
           {
+            "id": 20,
             "source": "Descendre / To dismount",
             "translation": "Afstijgen"
           },
           {
+            "id": 20,
             "source": "Monter / To mount",
             "translation": "Opstijgen"
           },
           {
+            "id": 20,
             "source": "Rênes",
             "translation": "Teugels"
           },
           {
+            "id": 20,
             "source": "Raccourcir les rênes / To pick up the reins",
             "translation": "Teugels oppakken"
           },
           {
+            "id": 20,
             "source": "Récompenser",
             "translation": "Belonen"
           },
           {
+            "id": 20,
             "source": "Carresser",
             "translation": "Een klopje geven"
           },
           {
+            "id": 20,
             "source": "Caliner / To pet",
             "translation": "Aaien"
           },
           {
+            "id": 20,
             "source": "Arrêt",
             "translation": "Halthouden"
           },
           {
+            "id": 20,
             "source": "Cordon",
             "translation": "Bandje"
           },
           {
+            "id": 20,
             "source": "Seller",
             "translation": "Zadelen"
           },
           {
+            "id": 20,
             "source": "Licol",
             "translation": "Halster"
           },
           {
+            "id": 20,
             "source": "Attacher",
             "translation": "Vastbinden"
           },
           {
+            "id": 20,
             "source": "Glisser",
             "translation": "Glijden"
           },
           {
+            "id": 20,
             "source": "Boucle",
             "translation": "Gesp"
           },
           {
+            "id": 20,
             "source": "Filer",
             "translation": "net"
           },
           {
+            "id": 20,
             "source": "Encolure",
             "translation": "Halsopening"
           },
           {
+            "id": 20,
             "source": "Mors",
             "translation": "Het bit"
           },
           {
+            "id": 20,
             "source": "Gorge",
             "translation": "Hals"
           },
           {
+            "id": 20,
             "source": "Crinière",
             "translation": "Manen"
           }
@@ -274,282 +336,352 @@
         "name": "Horse riding 2",
         "words": [
           {
+            "id": 30,
             "source": "Tendon",
             "translation": "Pees"
           },
           {
+            "id": 30,
             "source": "Jarret (partie inférieur de la jambe)",
             "translation": "Hak"
           },
           {
+            "id": 30,
             "source": "Genou",
             "translation": "Knie"
           },
           {
+            "id": 30,
             "source": "Queue",
             "translation": "Staart"
           },
           {
+            "id": 30,
             "source": "Couverture",
             "translation": "Deken"
           },
           {
+            "id": 30,
             "source": "Longe d'attache / Rope",
             "translation": "Halstertouw"
           },
           {
+            "id": 30,
             "source": "Équipement",
             "translation": "Harnachement / Uitrusting"
           },
           {
+            "id": 30,
             "source": "Chaîne",
             "translation": "Ketting"
           },
           {
+            "id": 30,
             "source": "Cloches",
             "translation": "Springschoenen"
           },
           {
+            "id": 30,
             "source": "Corde / Longe",
             "translation": "Touw"
           },
           {
+            "id": 30,
             "source": "Cravache",
             "translation": "Zweep"
           },
           {
+            "id": 30,
             "source": "Bride",
             "translation": "Hoofdstel"
           },
           {
+            "id": 30,
             "source": "Sous-gorge (partie de la bride sous la gorge)",
             "translation": "Keelriem"
           },
           {
+            "id": 30,
             "source": "Têtière (partie de la bride derrière les oreilles)",
             "translation": "Kopstuk"
           },
           {
+            "id": 30,
             "source": "Muserolle (partie de la bride sur le nez)",
             "translation": "Neusriem"
           },
           {
+            "id": 30,
             "source": "Frontal (partie de la devant les oreilles)",
             "translation": "Frontriem"
           },
           {
+            "id": 30,
             "source": "Bride complète",
             "translation": "Stang en trens"
           },
           {
+            "id": 30,
             "source": "Bonnet",
             "translation": "Oornetje"
           },
           {
+            "id": 30,
             "source": "Étrille (brosse dure)",
             "translation": "Rosborstel"
           },
           {
+            "id": 30,
             "source": "Bouchon (brosse médium)",
             "translation": "Hardeborstel"
           },
           {
+            "id": 30,
             "source": "Brosse douce",
             "translation": "Zachteborstel"
           },
           {
+            "id": 30,
             "source": "Fer à cheval",
             "translation": "Hoefijzer"
           },
           {
+            "id": 30,
             "source": "Cure-pied",
             "translation": "Hoevenkrabber"
           },
           {
+            "id": 30,
             "source": "Curer les pieds",
             "translation": "Hoeven uitkrabben"
           },
           {
+            "id": 30,
             "source": "Peigne",
             "translation": "Kam"
           },
           {
+            "id": 30,
             "source": "Fumier",
             "translation": "Mesthoop"
           },
           {
+            "id": 30,
             "source": "Brosser",
             "translation": "Poetsen"
           },
           {
+            "id": 30,
             "source": "Pansage",
             "translation": "Poetsbeurt"
           },
           {
+            "id": 30,
             "source": "Shampooing",
             "translation": "Shampoo"
           },
           {
+            "id": 30,
             "source": "Éponge",
             "translation": "Spons"
           },
           {
+            "id": 30,
             "source": "Litière",
             "translation": "Stalbedekking"
           },
           {
+            "id": 30,
             "source": "Le van",
             "translation": "Trailer"
           },
           {
+            "id": 30,
             "source": "Mouche",
             "translation": "Vlieg"
           },
           {
+            "id": 30,
             "source": "Pas",
             "translation": "Stap"
           },
           {
+            "id": 30,
             "source": "Piste",
             "translation": "Rijbaan"
           },
           {
+            "id": 30,
             "source": "Allée cavalière / Track",
             "translation": "Hoefslag"
           },
           {
+            "id": 30,
             "source": "Rester immobile",
             "translation": "Stilstaan"
           },
           {
+            "id": 30,
             "source": "Distance",
             "translation": "Afstand"
           },
           {
+            "id": 30,
             "source": "Score",
             "translation": "Puntentelling"
           },
           {
+            "id": 30,
             "source": "Sabot",
             "translation": "Hoef"
           },
           {
+            "id": 30,
             "source": "Croupe (le derrière)",
             "translation": "Kruis"
           },
           {
+            "id": 30,
             "source": "Casque / Toque",
             "translation": "Cap"
           },
           {
+            "id": 30,
             "source": "Gants",
             "translation": "Handschoenen"
           },
           {
+            "id": 30,
             "source": "Boots (chaussures basses)",
             "translation": "Jodhpurs"
           },
           {
+            "id": 30,
             "source": "Bottes (chaussures au dessus du mollet)",
             "translation": "Laarzen"
           },
           {
+            "id": 30,
             "source": "Sangle",
             "translation": "Single"
           },
           {
+            "id": 30,
             "source": "Étrier",
             "translation": "Stijgbeugel"
           },
           {
+            "id": 30,
             "source": "Etrivières",
             "translation": "Stijgbeugelriemen"
           },
           {
+            "id": 30,
             "source": "Porte-étrivières",
             "translation": "Stijgbeugelriemhaak"
           },
           {
+            "id": 30,
             "source": "Tapis de selle",
             "translation": "Zadeldeken"
           },
           {
+            "id": 30,
             "source": "Mettre la selle",
             "translation": "Opzadelen"
           },
           {
+            "id": 30,
             "source": "Siège (assise de la selle)",
             "translation": "Zit"
           },
           {
+            "id": 30,
             "source": "Pommeau (avant de la selle)",
             "translation": "Voorboom"
           },
           {
+            "id": 30,
             "source": "Arrière de la selle",
             "translation": "Achterboom"
           },
           {
+            "id": 30,
             "source": "Sangler",
             "translation": "Aansingelen"
           },
           {
+            "id": 30,
             "source": "Resangler",
             "translation": "Nasingelen"
           },
           {
+            "id": 30,
             "source": "Cuir",
             "translation": "Leer"
           },
           {
+            "id": 30,
             "source": "Affaires de nettoyage",
             "translation": "Poetsspullen"
           },
           {
+            "id": 30,
             "source": "Paardenvoer",
             "translation": "Nourriture pour chevaux"
           },
           {
+            "id": 30,
             "source": "Brouter",
             "translation": "Grazen"
           },
           {
+            "id": 30,
             "source": "Avoine",
             "translation": "Haver"
           },
           {
+            "id": 30,
             "source": "Foin",
             "translation": "Hooi"
           },
           {
+            "id": 30,
             "source": "Granules",
             "translation": "Krachtvoer"
           },
           {
+            "id": 30,
             "source": "Bonbons",
             "translation": "Snoepjes"
           },
           {
+            "id": 30,
             "source": "Paille",
             "translation": "Stro"
           },
           {
+            "id": 30,
             "source": "Aliment",
             "translation": "Voer"
           },
           {
+            "id": 30,
             "source": "Pré",
             "translation": "Weide"
           },
           {
+            "id": 30,
             "source": "Son (partie des grains)",
             "translation": "Zemelen"
           },
           {
+            "id": 30,
             "source": "Lucerne (plante)",
             "translation": "Luzerne"
           },
           {
+            "id": 30,
             "source": "Fourrage (bottes de foin)",
             "translation": "Ruwvoer"
           }
@@ -559,138 +691,172 @@
         "name": "Harry Potter - Book 1",
         "words": [
           {
+            "id": 40,
             "source": "mysterious",
             "translation": "geheimzinnig"
           },
           {
+            "id": 40,
             "source": "thin",
             "translation": "mager"
           },
           {
+            "id": 40,
             "source": "fence",
             "translation": "schutting"
           },
           {
+            "id": 40,
             "source": "gluren",
             "translation": "to peek"
           },
           {
+            "id": 40,
             "source": "fear",
             "translation": "angst"
           },
           {
+            "id": 40,
             "source": "shame",
             "translation": "schaamte"
           },
           {
+            "id": 40,
             "source": "thought",
             "translation": "gedachte"
           },
           {
+            "id": 40,
             "source": "to wake up",
             "translation": "wakker worden"
           },
           {
+            "id": 40,
             "source": "cloudy",
             "translation": "bewolkte"
           },
           {
+            "id": 40,
             "source": "to gossip",
             "translation": "roddelen"
           },
           {
+            "id": 40,
             "source": "flutter, flotter",
             "translation": "fladderen"
           },
           {
+            "id": 40,
             "source": "briefcase",
             "translation": "koffertje"
           },
           {
+            "id": 40,
             "source": "kiss",
             "translation": "zoentje"
           },
           {
+            "id": 40,
             "source": "failed",
             "translation": "mislukt"
           },
           {
+            "id": 40,
             "source": "to insist",
             "translation": "dringen"
           },
           {
+            "id": 40,
             "source": "to turn",
             "translation": "draaien"
           },
           {
+            "id": 40,
             "source": "to confess",
             "translation": "bekennen"
           },
           {
+            "id": 40,
             "source": "to imagine",
             "translation": "verbeelden"
           },
           {
+            "id": 40,
             "source": "nowhere to be seen",
             "translation": "nergens te bekennen"
           },
           {
+            "id": 40,
             "source": "optical illusion",
             "translation": "gezichtsbedrog"
           },
           {
+            "id": 40,
             "source": "to blink",
             "translation": "knipperen"
           },
           {
+            "id": 40,
             "source": "to shake",
             "translation": "schudden"
           },
           {
+            "id": 40,
             "source": "disturbed",
             "translation": "verstoord"
           },
           {
+            "id": 40,
             "source": "was stuck",
             "translation": "vastzat"
           },
           {
+            "id": 40,
             "source": "usual",
             "translation": "gebruikelijk"
           },
           {
+            "id": 40,
             "source": "nowadays",
             "translation": "tegenwoordig"
           },
           {
+            "id": 40,
             "source": "to whisper",
             "translation": "fluisteren"
           },
           {
+            "id": 40,
             "source": "to dare",
             "translation": "durven"
           },
           {
+            "id": 40,
             "source": "suddenly",
             "translation": "plotseling"
           },
           {
+            "id": 40,
             "source": "to realise",
             "translation": "beseffen"
           },
           {
+            "id": 40,
             "source": "probably",
             "translation": "waarschijnlijk"
           },
           {
+            "id": 40,
             "source": "to collect",
             "translation": "verzamelen"
           },
           {
+            "id": 40,
             "source": "that had to be it",
             "translation": "dat moest het zijn"
           },
           {
+            "id": 40,
             "source": "what's the point",
             "translation": "Wat heeft het voor zin"
           }
@@ -705,22 +871,27 @@
         "name": "Test list 1",
         "words": [
           {
+            "id": 50,
             "source": "Hello",
             "translation": "Hallo"
           },
           {
+            "id": 50,
             "source": "Thank you",
             "translation": "Dank je wel"
           },
           {
+            "id": 50,
             "source": "Bye",
             "translation": "Doei"
           },
           {
+            "id": 50,
             "source": "Test1",
             "translation": "Test1"
           },
           {
+            "id": 50,
             "source": "Test2",
             "translation": "Test2"
           }
@@ -730,14 +901,17 @@
         "name": "Test list 2",
         "words": [
           {
+            "id": 50,
             "source": "Hello",
             "translation": "Hallo"
           },
           {
+            "id": 50,
             "source": "Thank you",
             "translation": "Dank je wel"
           },
           {
+            "id": 50,
             "source": "Bye",
             "translation": "Doei"
           }
@@ -747,14 +921,17 @@
         "name": "Test list 3",
         "words": [
           {
+            "id": 50,
             "source": "Hello",
             "translation": "Hallo"
           },
           {
+            "id": 50,
             "source": "Thank you",
             "translation": "Dank je wel"
           },
           {
+            "id": 50,
             "source": "Bye",
             "translation": "Doei"
           }
@@ -764,14 +941,17 @@
         "name": "Test list 4",
         "words": [
           {
+            "id": 50,
             "source": "Hello",
             "translation": "Hallo"
           },
           {
+            "id": 50,
             "source": "Thank you",
             "translation": "Dank je wel"
           },
           {
+            "id": 50,
             "source": "Bye",
             "translation": "Doei"
           }
@@ -781,14 +961,17 @@
         "name": "Test list 5",
         "words": [
           {
+            "id": 50,
             "source": "Hello",
             "translation": "Hallo"
           },
           {
+            "id": 50,
             "source": "Thank you",
             "translation": "Dank je wel"
           },
           {
+            "id": 50,
             "source": "Bye",
             "translation": "Doei"
           }
@@ -798,14 +981,17 @@
         "name": "Test list 6",
         "words": [
           {
+            "id": 50,
             "source": "Hello",
             "translation": "Hallo"
           },
           {
+            "id": 50,
             "source": "Thank you",
             "translation": "Dank je wel"
           },
           {
+            "id": 50,
             "source": "Bye",
             "translation": "Doei"
           }
@@ -815,14 +1001,17 @@
         "name": "Test list 7",
         "words": [
           {
+            "id": 50,
             "source": "Hello",
             "translation": "Hallo"
           },
           {
+            "id": 50,
             "source": "Thank you",
             "translation": "Dank je wel"
           },
           {
+            "id": 50,
             "source": "Bye",
             "translation": "Doei"
           }
@@ -832,14 +1021,17 @@
         "name": "Test list 8",
         "words": [
           {
+            "id": 50,
             "source": "Hello",
             "translation": "Hallo"
           },
           {
+            "id": 50,
             "source": "Thank you",
             "translation": "Dank je wel"
           },
           {
+            "id": 50,
             "source": "Bye",
             "translation": "Doei"
           }
@@ -849,14 +1041,17 @@
         "name": "Test list 9",
         "words": [
           {
+            "id": 50,
             "source": "Hello",
             "translation": "Hallo"
           },
           {
+            "id": 50,
             "source": "Thank you",
             "translation": "Dank je wel"
           },
           {
+            "id": 50,
             "source": "Bye",
             "translation": "Doei"
           }
@@ -866,14 +1061,17 @@
         "name": "Test list 10",
         "words": [
           {
+            "id": 50,
             "source": "Hello",
             "translation": "Hallo"
           },
           {
+            "id": 50,
             "source": "Thank you",
             "translation": "Dank je wel"
           },
           {
+            "id": 50,
             "source": "Bye",
             "translation": "Doei"
           }

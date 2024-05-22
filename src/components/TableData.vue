@@ -19,7 +19,7 @@ const props = withDefaults(defineProps<Props>(), {
       </tr>
     </thead>
     <tbody v-if="props.data && props.data?.length > 0">
-      <tr v-for="word in props.data" :key="word.source">
+      <tr v-for="word in props.data" :key="word.id">
         <td>{{ word.source }}</td>
         <td>{{ word.translation }}</td>
       </tr>

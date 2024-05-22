@@ -4,8 +4,8 @@ import type { List, User } from '@/types';
 import { LOCAL_STORAGE_CURRENT_USER_DATA, LOCAL_STORAGE_CURRENT_USER_LIST } from '@/constants';
 
 export const useUserStore = defineStore('userStore', () => {
-  const currentUserData: Ref<User> = ref(null);
-  const currentUserList: Ref<List> = ref(null);
+  const currentUserData: Ref<User | null> = ref(null);
+  const currentUserList: Ref<List | null> = ref(null);
 
   function setUserData(selectedUser: User) {
     currentUserData.value = selectedUser;
