@@ -1,17 +1,15 @@
 <script setup lang="ts">
 import { computed, type Ref, ref } from 'vue';
 import MainHeader from '@/components/MainHeader.vue';
+import TableData from '@/components/TableData.vue';
 import { useRouter } from 'vue-router';
 import type { Word } from '@/types';
 
 const router = useRouter();
 
-// TODO: temporary until the original Word type is fixed
-type wordsArrayType = Array<Word & { id: string }>;
-
 const listTitle: Ref<string> = ref('');
 const fileContent: Ref<string> = ref('');
-const parsedArray: Ref<wordsArrayType> = ref([]);
+const parsedArray: Ref<Word[]> = ref([]);
 const isImportSuccessful: Ref<boolean> = ref(false);
 const valid: Ref<boolean | null | undefined> = ref(null);
 const rules: Ref<{
@@ -105,8 +103,9 @@ function onClickCreateList() {
   </v-form>
 
   <template v-else>
-    <!-- TODO: create a reusable table component -->
-    <v-table class="table" density="comfortable" fixed-header>
+    <TableData :data="parsedArray" />
+
+    <!-- <v-table class="table" density="comfortable" fixed-header>
       <thead class="thead">
         <tr>
           <th class="th">Source</th>
@@ -119,7 +118,8 @@ function onClickCreateList() {
           <td>{{ word.translation }}</td>
         </tr>
       </tbody>
-    </v-table>
+    </v-table> -->
+
     <section class="btn-container">
       <v-btn class="btn-cancel" @click="onClickCancel" :disabled="!valid"> Cancel </v-btn>
       <v-btn class="btn-create" @click="onClickCreateList" :disabled="!valid"> Create </v-btn>
@@ -134,16 +134,11 @@ function onClickCreateList() {
   flex-direction: column;
 }
 
-.form-container,
-.table {
+.form-container {
   display: flex;
   flex-direction: column;
   flex: 1;
   overflow-y: auto;
-}
-
-.th {
-  font-weight: bold !important;
 }
 
 .list-title {
