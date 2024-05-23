@@ -1,20 +1,33 @@
 # vocabulary-learning-app
 
-TODO: Upgrade README
+## Project
 
-This template should help get you started developing with Vue 3 in Vite.
+App to learn vocabulary lists in any languages.
 
-## Recommended IDE Setup
+Features (in progress):
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+- Select a profile
+- Show lists of vocabulary
+- Add list manually
+- Add list with CSV format
+- View lists content
+- Learn with flashcards
+- Learn by typing
 
-## Type Support for `.vue` Imports in TS
+## Technologies
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+- Vue3 (composition API): https://vuejs.org/guide/introduction.html
+- Typescript: https://www.typescriptlang.org/
+- Vuetify: https://vuetifyjs.com/en/
+- Material Design icons: https://pictogrammers.com/library/mdi/
 
-## Customize configuration
+## Links
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+Deploy with Github Pages on: https://listup.stephaniealix.com/
+
+## Dependencies
+
+Backend repository: https://github.com/alix2018/list-up-api (in progress)
 
 ## Project Setup
 
